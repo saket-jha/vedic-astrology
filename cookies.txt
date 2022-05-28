@@ -1,0 +1,5 @@
+# HTTrack Website Copier Cookie File
+# This file format is compatible with Netscape cookies
+vedicastrology.wikidot.com	TRUE	/	FALSE	1999999999	wikidot_token7	52f6ba180c832659f4c9f32d927930fd
+.quantserve.com	TRUE	/	FALSE	1999999999	mc	6290feb4-e871b-c5830-238f3
+

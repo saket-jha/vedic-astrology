@@ -1,0 +1,695 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+
+<!-- Mirrored from vedicastrology.wikidot.com/machine-learning-starter by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 27 May 2022 16:49:10 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+    <title>Machine Learning Starter - Vedic Astrology</title>
+    
+    
+    
+    <script type="text/javascript" src="../d3g0gp89917ko0.cloudfront.net/v--291054f06006/common--javascript/init.combined.js"></script>
+    <script  type="text/javascript">
+        var URL_HOST = 'www.wikidot.com';
+        var URL_DOMAIN = 'wikidot.com';
+        var USE_SSL =  true ;
+        var URL_STATIC = 'http://d3g0gp89917ko0.cloudfront.net/v--291054f06006';
+        // global request information
+        
+        var WIKIREQUEST = {};
+        WIKIREQUEST.info = {};
+        
+        WIKIREQUEST.info.domain = "vedicastrology.wikidot.com";
+        WIKIREQUEST.info.siteId = 92260;
+        WIKIREQUEST.info.siteUnixName = "vedicastrology";
+        WIKIREQUEST.info.categoryId = 508976;
+        WIKIREQUEST.info.themeId = 82723;
+        WIKIREQUEST.info.requestPageName = "machine-learning-starter";
+        OZONE.request.timestamp = 1653669547;
+        OZONE.request.date = new Date();
+        WIKIREQUEST.info.lang = 'en';
+                WIKIREQUEST.info.pageUnixName = "machine-learning-starter";
+        WIKIREQUEST.info.pageId = 917912580;
+                        WIKIREQUEST.info.lang = "en";
+        OZONE.lang = "en";
+        var isUAMobile = !!/Android|webOS|iPhone|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    </script>
+    
+    
+
+
+    
+        <script  type="text/javascript">
+    
+        require.config({
+            baseUrl: URL_STATIC + '/common--javascript',
+            paths: {
+                'jquery.ui': 'jquery-ui.min',
+                'jquery.form': 'jquery.form'
+            }
+        });
+    
+    </script>
+    
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8"/>
+            
+    
+    
+    
+    
+    <meta http-equiv="content-language" content="en"/>
+    <script type="text/javascript" src="../d3g0gp89917ko0.cloudfront.net/v--291054f06006/common--javascript/WIKIDOT.combined.js"></script>
+        
+    
+    <style type="text/css" id="internal-style">
+        
+        /* modules */
+        
+                
+        /* theme */
+                    @import url(../d3g0gp89917ko0.cloudfront.net/v--291054f06006/common--theme/base/css/style.css);
+                    @import url(../vedicastrology.wdfiles.com/local--theme/simple/style.css);
+            </style>
+    
+        
+        
+        
+    <link rel="shortcut icon" href="local--favicon/favicon.gif"/>
+    <link rel="icon" type="image/gif" href="local--favicon/favicon.gif"/>
+    
+            <link rel="apple-touch-icon" href="common--images/apple-touch-icon-57x57.png" />
+        <link rel="apple-touch-icon" sizes="72x72" href="common--images/apple-touch-icon-72x72.png" />
+        <link rel="apple-touch-icon" sizes="114x114" href="common--images/apple-touch-icon-114x114.png" />
+        
+        
+            <link rel="alternate" type="application/wiki" title="Edit this page" href="javascript:WIKIDOT.page.listeners.editClick()"/>
+    
+        <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-18234656-1']);
+        _gaq.push(['_setDomainName', 'none']);
+        _gaq.push(['_setAllowLinker', true]);
+        _gaq.push(['_trackPageview']);
+
+        _gaq.push(['old._setAccount', 'UA-68540-5']);
+        _gaq.push(['old._setDomainName', 'none']);
+        _gaq.push(['old._setAllowLinker', true]);
+        _gaq.push(['old._trackPageview']);
+
+            </script>
+    
+    <script type="text/javascript">
+        window.google_analytics_uacct = 'UA-18234656-1';
+        window.google_analytics_domain_name = 'none';
+    </script>
+    
+        <link rel="manifest" href="onesignal/manifest.html" />
+    <script src="../cdn.onesignal.com/sdks/OneSignalSDK.js" acync=""></script>
+    <script>
+        var OneSignal = window.OneSignal || [];
+        OneSignal.push(function() {
+          OneSignal.init({
+            appId: null,
+          });
+        });
+    </script>
+        
+</head>
+<body id="html-body">
+<div id="skrollr-body">
+<a name="page-top"></a>
+
+
+
+
+
+<div id="container-wrap-wrap">
+    <div id="container-wrap">
+        <div id="container">
+            <div id="header">
+              <h1><a href="index.html"><span>Vedic Astrology</span></a></h1>
+                
+                    <h2><span>Vedic Jyotisha Unravelled !</span></h2>
+                
+                
+                <!-- google_ad_section_start(weight=ignore) -->
+                
+                <div id="search-top-box" class="form-search">
+    <form id="search-top-box-form" action="http://vedicastrology.wikidot.com/dummy" class="input-append">
+        <input id="search-top-box-input" class="text empty search-query" type="text" size="15" name="query" value="Search this site" onfocus="if(YAHOO.util.Dom.hasClass(this, 'empty')){YAHOO.util.Dom.removeClass(this,'empty'); this.value='';}"/><input class="button btn" type="submit" name="search" value="Search"/>
+    </form>
+</div>
+                
+                
+                    <div id="top-bar">
+                        
+
+<ul>
+<li><a href="javascript:;">Tutorial</a>
+<ul>
+<li><a href="start.html">Start</a></li>
+<li><a href="overview.html">Overview</a></li>
+<li><a href="hindu-calendar.html">Hindu Calendar</a></li>
+<li><a href="planetary-traits-1.html">Planetary Traits-1</a></li>
+<li><a href="origin-and-meaning-of-horoscopic-houses.html">Origin and Meaning of Horoscopic Houses</a></li>
+<li><a href="own-sign-exaltation-and-moola-trikona-of-nodes.html">Own Sign, Exaltation and Moola Trikona of Nodes</a></li>
+<li><a href="friendships.html">Friendships</a></li>
+<li><a href="how-to-make-correct-predictions.html">How To Make Correct Predictions</a></li>
+<li><a href="ayanamsha-vs-precession.html">Ayanamsha vs Precession</a></li>
+<li><a href="bhaavachalita.html">Bhaavachalita</a></li>
+<li><a href="udaya-asta-or-heliacal-risings-and-settings.html">Udaya-Asta or Heliacal Risings and Settings</a></li>
+<li><a href="origin-of-150-naadis.html">Origin of 150 Naadis</a></li>
+<li><a href="vimshottari-year-length.html">Vimshottari Year Length</a></li>
+<li><a href="dashaa-level-nomenclature.html">Dashaa-Level Nomenclature</a></li>
+<li><a href="sudarshana-chakra.html">Sudarshana Chakra</a></li>
+<li><a href="arudha-pada-and-other-padas.html">Arudha-pada and Other Padas</a></li>
+<li><a href="ashtaka-varga.html">Ashtaka Varga</a></li>
+<li><a href="vipareet-raja-yoga.html">Vipareet Raja Yoga</a></li>
+<li><a href="karakamsha.html">Karakamsha</a></li>
+<li><a href="planetary-war.html">Planetary War</a></li>
+<li><a href="md-and-ad-results-laghu-parashari.html">MD and AD results - Laghu Parashari</a></li>
+<li><a href="strength-of-a-house.html">Strength of a House</a></li>
+<li><a href="four-purusharthas-as-four-trikonas-in-horoscope.html">Four Purusharthas as Four Trikonas in Horoscope</a></li>
+<li><a href="four-types-of-faiths-in-vedic-astrology.html">Four Types of Faiths in Vedic Astrology</a></li>
+<li><a href="eight-gatis-or-speeds.html">Eight Gatis or Speeds</a></li>
+<li><a href="main-strength-versus-shadbala.html">Main Strength versus Shadbala</a></li>
+<li><a href="divisional-charts.html">Divisional Charts</a></li>
+<li><a href="non-luminous-upagrahas-and-gulika-or-mandi-etc.html">Non Luminous Upagrahas and Gulika or Mandi etc</a></li>
+<li><a href="diabetes-or-madhumeha.html">Diabetes or Madhumeha</a></li>
+<li><a href="shashtyamsha-deities.html">Shashtyamsha Deities</a></li>
+<li><a href="varga-categories-and-vargottama.html">Varga-Categories and Vargottama</a></li>
+<li><a href="effects-of-a-planet-in-antardashaa-of-relative-or-sadharmi.html">Effects of A Planet In Antardashaa of Relative or Sadharmi</a></li>
+<li><a href="compatibility-or-melapaka.html">Compatibility or Melapaka</a></li>
+<li><a href="planetary-return-charts.html">Planetary RETURN Charts</a></li>
+<li><a href="rationale-behind-exaltations-of-planets.html">Rationale behind Exaltations of Planets</a></li>
+<li><a href="astrological-mathematics-of-menstrual-cycle.html">Astrological Mathematics of Menstrual Cycle</a></li>
+<li><a href="mean-versus-true-time-and-measure-of-day-or-ghati.html">Mean versus True Time and Measure of Day or Ghati</a></li>
+<li><a href="weekday-sequence-indian-view.html">Weekday Sequence - Indian View</a></li>
+<li><a href="bhaavas-from-all-bhaavas.html">Bhaavas from all Bhaavas</a></li>
+<li><a href="maangalika-dosha.html">Maangalika Dosha</a></li>
+<li><a href="bhrigu-bindu.html">Bhrigu Bindu</a></li>
+<li><a href="sarvato-bhadra-chakra.html">Sarvato-Bhadra Chakra</a></li>
+<li><a href="vaar.html">Vaar</a></li>
+</ul>
+</li>
+<li><a href="javascript:;">Natal</a>
+<ul>
+<li><a href="donald-trump.html">Donald Trump</a></li>
+<li><a href="rashtriya-svayamsevak-sangh.html">Rashtriya Svayamsevak Sangh</a></li>
+<li><a href="swami-ramakrishna-paramhamsa.html">Swami Ramakrishna Paramhamsa</a></li>
+<li><a href="indira-gandhi.html">Indira Gandhi</a></li>
+<li><a href="indira-gandhi-hindi.html">Indira Gandhi -HINDI</a></li>
+<li><a href="aap_aam-adami-party.html">AAm Adami Party</a></li>
+<li><a href="arvind-kejriwal.html">Arvind Kejriwal</a></li>
+<li><a href="congress-vs-bjp-2014.html">Congress vs BJP 2014</a></li>
+<li><a href="swearing-in-muhurta-of-new-indian-govt-in-2014.html">Swearing-In Muhurta Of New Indian Govt In 2014</a></li>
+<li><a href="narendra-modi.html">Narendra Modi</a></li>
+<li><a href="birth-chart-of-gopinath-munde.html">Birth Chart Of Gopinath Munde</a></li>
+<li><a href="lord-rama.html">Lord Rama</a></li>
+<li><a href="jayalalita.html">Jayalalita</a></li>
+<li><a href="prediction-of-death.html">Prediction Of Death</a></li>
+<li><a href="indo-pak-cricket-match-in-world-cup-14-feb-2015-adelaide.html">Indo-Pak Cricket Match in World Cup 14 Feb 2015 Adelaide</a></li>
+<li><a href="prophet-muhammad.html">Prophet Muhammad</a></li>
+<li><a href="david-cameron.html">David Cameron</a></li>
+<li><a href="nitish-kumar.html">Nitish Kumar</a></li>
+<li><a href="amir-khan.html">Amir Khan</a></li>
+<li><a href="ram-rahim.html">Ram Rahim</a></li>
+<li><a href="amitabh-bachchan-covid19.html">Amitabh Bachchan Covid19</a></li>
+<li><a href="yogi-adityanath.html">Yogi Adityanath</a></li>
+</ul>
+</li>
+<li><a href="javascript:;">Stocks</a>
+<ul>
+<li><a href="gold-price-forecasting.html">Gold Price Forecasting</a></li>
+<li><a href="silver-graph-1.html">Silver Graph-1</a></li>
+<li><a href="forex-1.html">Forex-1</a></li>
+<li><a href="iron-price-forecasting.html">Iron Price Forecasting</a></li>
+<li><a href="sensex-forecasting.html">Sensex Forecasting</a></li>
+<li><a href="sensex-vs-gold-comparison.html">Sensex vs Gold Comparison</a></li>
+</ul>
+</li>
+<li><a href="javascript:;">Medini</a>
+<ul>
+<li><a href="raaj-jyotisha.html">Raaj-Jyotisha</a></li>
+<li><a href="national-income.html">National Income</a></li>
+<li><a href="general-principles.html">General Principles</a></li>
+<li><a href="sapta-nadi-chakra.html">Sapta-Nadi Chakra</a></li>
+<li><a href="china-japan-war-1281-a-d.html">China-Japan War 1281 A.D.</a></li>
+<li><a href="annual-rains-in-india.html">Annual Rains in India</a></li>
+<li><a href="rain-forecast-for-2013-4.html">Rain Forecast for 2013-4</a></li>
+<li><a href="rain-charts-for-2014-5.html">Rain Charts for 2014-5</a></li>
+<li><a href="weather-forecasting-temperature-c.html">Weather Forecasting - Temperature &amp;c</a></li>
+<li><a href="invasion-of-india-battle-of-plassey.html">Invasion Of India--Battle of Plassey</a></li>
+<li><a href="invasion-of-india-alexander.html">Invasion Of India--Alexander</a></li>
+<li><a href="divya-varsha-phala-1579-1939-ad.html">Divya Varsha-phala--1579-1939 AD</a></li>
+<li><a href="divya-maasa-phala-1999-2029-ad.html">Divya Maasa-phala--1999-2029 AD</a></li>
+<li><a href="uttarakhand-cataclysm-mid-june-2013.html">Uttarakhand Cataclysm--mid June 2013</a></li>
+<li><a href="world-rains-data-analysis-of-1956-7.html">World Rains Data Analysis of 1956-7</a></li>
+<li><a href="eclipses.html">Eclipses</a></li>
+<li><a href="earthquake-of-nepal-25-apr-2015.html">Earthquake of Nepal 25 Apr 2015</a></li>
+<li><a href="terror-attack-on-uri-18-sep-2016.html">Terror Attack on Uri 18 Sep 2016</a></li>
+<li><a href="fani.html">Fani फणि चक्रवात</a></li>
+</ul>
+</li>
+<li><a href="javascript:;">Articles</a>
+<ul>
+<li><a href="creative-imagination.html">Creative Imagination</a></li>
+<li><a href="history-of-pi.html">History of Pi</a></li>
+<li><a href="links_pdf-files.html">PDF files</a></li>
+<li><a href="vedic-linguistics.html">Vedic Linguistics</a></li>
+<li><a href="modern-equations-on-ancient-principles.html">Modern Equations On Ancient Principles</a></li>
+<li><a href="origin-of-tropicalism-in-western-astrology.html">Origin of Tropicalism in Western Astrology</a></li>
+<li><a href="dreams-and-moksha.html">Dreams and Moksha</a></li>
+<li><a href="vedic-versus-western-astrology.html">Vedic versus Western Astrology</a></li>
+<li><a href="non-astrological-essays.html">Non-Astrological Essays</a></li>
+<li><a href="indology.html">INDOLOGY</a></li>
+<li><a href="ayurvedic-approach-to-know-your-nature.html">Ayurvedic Approach to Know Your Nature</a></li>
+<li><a href="healthy-eating.html">Healthy Eating</a></li>
+<li><a href="mockery-of-history_horoscope-of-lord-ram.html">horoscope-of-lord-ram</a></li>
+<li><a href="dr-lakshaman-jha-biography.html">Dr Lakshaman Jha Biography</a></li>
+<li><a href="links-to-books-on-hinduism.html">Links To Books On Hinduism</a></li>
+<li><a href="allopathy-vs-ayurveda.html">Allopathy vs Ayurveda</a></li>
+</ul>
+</li>
+<li><a href="javascript:;">Misc</a>
+<ul>
+<li><a href="kundalee-software-download.html">Kundalee Software Download</a></li>
+<li><a href="kundalee-compare-software-download.html">Kundalee-Compare Software Download</a></li>
+<li><a href="bhaavaant-software-download.html">Bhaavaant Software Download</a></li>
+<li><a href="our-forum.html">Our Forum</a></li>
+<li><a href="graha-shanti-propitiation-of-planets.html">Graha Shanti (Propitiation of Planets)</a></li>
+<li><a href="best-devanagari-font.html">Best Devanagari Font</a></li>
+<li><a href="mithilakshara-font.html">Mithilakshara Font</a></li>
+<li><a href="sort-program.html">Sort Program</a></li>
+<li><a href="maithil-brahmana.html">Maithil Brahmana</a></li>
+</ul>
+</li>
+<li><a href="javascript:;">AI</a>
+<ul>
+<li><a href="machine-learning-starter.html">Machine Learning Starter</a></li>
+<li><a href="gpu-neural-network-training.html">GPU Neural Network Training</a></li>
+<li><a href="neural-network-parameters-tuning.html">Neural Network Parameters Tuning</a></li>
+<li><a href="auto-m-l-model-search.html">Auto M L Model Search</a></li>
+<li><a href="lstm-neural-network.html">LSTM Neural Network</a></li>
+<li><a href="web-scraping.html">Web Scraping</a></li>
+</ul>
+</li>
+<li><a href="javascript:;">Contact</a>
+<ul>
+<li><a href="email-to-vj.html">Email to VJ</a></li>
+<li><a href="profile-of-vinay-jha.html">Profile of Vinay Jha</a></li>
+<li><a href="credentials.html">Credentials</a></li>
+<li><a href="sitemap-search.html">SiteMap &amp; Search</a></li>
+</ul>
+</li>
+</ul>
+
+                    </div>
+                
+                <div id="login-status"><a href="javascript:;" onclick="WIKIDOT.page.listeners.createAccount(event)" class="login-status-create-account btn">Create account</a> <span>or</span> <a href="javascript:;" onclick="WIKIDOT.page.listeners.loginClick(event)" class="login-status-sign-in btn btn-primary">Sign in</a> </div>
+                <div id="header-extra-div-1"><span></span></div><div id="header-extra-div-2"><span></span></div><div id="header-extra-div-3"><span></span></div>
+            </div>
+            
+            <div id="content-wrap">
+                
+                
+                <!-- google_ad_section_end -->
+                
+                <div id="main-content">
+                    <div id="action-area-top"></div>
+                    
+                    
+                        <div id="page-title">
+                            Machine Learning Starter
+                        </div>
+                    
+
+                    
+
+                    
+
+
+
+                    <div id="page-content">
+                        
+
+<table style="margin:0; padding:0">
+<tr>
+<td style="margin:0; padding:0">
+<div id="toc">
+<div id="toc-action-bar"><a href="javascript:;" onclick="WIKIDOT.page.listeners.foldToc(event)">Fold</a><a style="display: none" href="javascript:;" onclick="WIKIDOT.page.listeners.unfoldToc(event)">Unfold</a></div>
+<div class="title">Table of Contents</div>
+<div id="toc-list">
+<div style="margin-left: 1em;"><a href="#toc0">Anaconda और PyCharm का इन्सटॉलेशन</a></div>
+<div style="margin-left: 2em;"><a href="#toc1">अनाकोण्डा का इन्सटॉलेशन</a></div>
+<div style="margin-left: 2em;"><a href="#toc2">PyCharm का इन्सटॉलेशन</a></div>
+<div style="margin-left: 2em;"><a href="#toc3">अनाकोण्डा में परिवर्तन</a></div>
+<div style="margin-left: 2em;"><a href="#toc4">डेडिकेटेड GPU प्रोग्रामिंग</a></div>
+<div style="margin-left: 1em;"><a href="#toc5">अनाकोण्डा प्रॉम्प्ट पर पायथन न्यूरल नेटवर्क मशीन लर्निंग प्रोग्राम</a></div>
+<div style="margin-left: 2em;"><a href="#toc6">मशीन लर्निंग के लिये डाटा फाइल</a></div>
+<div style="margin-left: 2em;"><a href="#toc7">प्रोग्राम की पूवपीठिका</a></div>
+<div style="margin-left: 2em;"><a href="#toc8">न्यूरल नेटवर्क की ट्रेनिंग</a></div>
+<div style="margin-left: 2em;"><a href="#toc9">प्रोग्राम का परिणाम</a></div>
+<div style="margin-left: 2em;"><a href="#toc10">भविष्यवाणी का प्रोग्रामर</a></div>
+<div style="margin-left: 2em;"><a href="#toc11">प्रोग्राम का तकनीकी विवरण</a></div>
+<div style="margin-left: 2em;"><a href="#toc12">फाइल डाउनलोड लिंक</a></div>
+<div style="margin-left: 1em;"><a href="#toc13">पायथन के विभिन्न ग्राफिक यूजर इण्टरफेसों पर प्रोग्रामिंग</a></div>
+<div style="margin-left: 2em;"><a href="#toc14">PyCharm में सम्पूर्ण उपरोक्त प्रोग्राम</a></div>
+<div style="margin-left: 2em;"><a href="#toc15">SPYDER</a></div>
+<div style="margin-left: 2em;"><a href="#toc16">JUPYTER NOTEBOOK</a></div>
+<div style="margin-left: 1em;"><a href="#toc17">मॉडल सेविंग का सर्वोत्तम उपाय</a></div>
+</div>
+</div>
+</td>
+</tr>
+</table>
+<h1 id="toc0"><span><span style="color:red"><strong>Anaconda और PyCharm का इन्सटॉलेशन</strong></span></span></h1>
+<h2 id="toc1"><span><span style="color:blue"><strong>अनाकोण्डा का इन्सटॉलेशन</strong></span></span></h2>
+<p><span style="font-size:125%;"><a href="https://www.anaconda.com/distribution/">https://www.anaconda.com/distribution/</a> वेबसाइट पर Windows，macOS तथा Linux में से “Windows” पर क्लिक करने से उसका इन्सटॉलेशन फाइल मिलेगा，आपके कम्प्यूटर का ऑपरेटिंग सिस्टम ३२ या ६४ बिट का जैसा भी हो उसी के अनुरूप Python 3.7 version वाले 64-Bit Graphical Installer अथवा 32-Bit Graphical Installer को क्लिक करेंगे तो डाउनलोड हो जायगा । कम्प्यूटर में मेमोरी कम होगी तो मशीन लर्निंग से दूर रहें । इण्टरनेट की गति भी अच्छी होनी चाहिये । उक्त इन्सटॉलेशन फाइल (मेरी मशीन में Anaconda3-2019.07-Windows-x86_64.exe) को रन करेंगे तो <strong>अनाकोण्डा</strong> इन्सटॉल हो जायगा，लगभग ३ जीबी का है । (बेहतर होगा कि उपरोक्त वर्सन की बजाय अनाकोण्डा के वेबसाइट से नवीनतम वर्सन डाउनलोड करें ।)</span></p>
+<p style="text-align: center;"><span style="color:red"><strong>~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</strong></span></p>
+<h2 id="toc2"><span><span style="color:blue"><strong>PyCharm का इन्सटॉलेशन</strong></span></span></h2>
+<p><a href="https://www.jetbrains.com/pycharm/download/#section=windows">https://www.jetbrains.com/pycharm/download/#section=windows</a> वेबसाइट से विण्डो वर्सन का पाइचार्म (कम्युनिटी एडिशन मुफ्त का है किन्तु अकेले व्यक्ति के लिये पर्याप्त है) डाउनलोड करके इन्सटॉल कर लें । फिलहाल कोई छेड़छाड़ न करें，पाइचार्म यदि खोल लिये हैं तो बन्द कर लें ।</p>
+<p style="text-align: center;"><span style="color:red"><strong>~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</strong></span></p>
+<h2 id="toc3"><span><span style="color:blue"><strong>अनाकोण्डा में परिवर्तन</strong></span></span></h2>
+<p>अनाकोण्डा में विभिन्न परियोजनाओं के लिये विभिन्न environment बनाने पड़ते हैं । प्रारम्भिक डिफॉल्ट environment का नाम है “base” जिसमें आवश्यक पैकेज रहते हैं । किन्तु कई प्रोग्रामों के लिये नये पैकेज जोड़ने पड़ते हैं । सामान्य परिपाटी यह है कि ऐसे कार्यों के लिये आपको नये कस्टम environment बनाकर उसके भीतर उन प्रोग्रामों को चलाना चाहिये，वरना नये पैकेजों के कारण base परिवर्तित हो जायगा तो बहुत से प्रोग्राम उसमें काम ही नहीं करेंगे और वह आपका उक्त कस्टम environment बन जायगा जिसमें आपके उक्त प्रोग्राम या वैसे प्रोग्राम ही चलेंगे । किन्तु मशीन लर्निंग के कुछ आवश्यक पैकेजों को आप base में जोड़ सकते हैं । उसकी विधि निम्न है ।</p>
+<p>विण्डो के स्टार्ट बटन पर जाकर “अनाकोण्डा” चुनें，उसमें “अनाकोण्डा प्रॉम्प्ट” को राइट क्लिक करें，more ऑप्शन पर जाकर run as administrator क्लिक करें जो अनाकोण्डा में परिवर्तन करने के लिये आवश्यक है । अनाकोण्डा का डिफॉल्ट इन्सटॉलेशन सिस्टम ड्राइव पर होता है जिस कारण एडमिनिस्ट्रेटिव मोड के बिना आप अनाकोण्डा में आप कोई जोड़−घटाव नहीं कर सकते । अनाकोण्डा को अन्य किसी ड्राइव पर इन्सटॉल करते तो एडमिनिस्ट्रेटिव मोड की आवश्यकता नहीं पड़ती，किन्तु डिफॉल्ट इन्सटॉलेशन सिस्टम ड्राइव पर ही रहने दें ।</p>
+<p>तब अनाकोण्डा का एडमिनिस्ट्रेटिव कमाण्ड प्रॉम्प्ट खुल जायगा । उसपर बारी−बारी से निम्न दो अपडेटिंग और दो पैकेज इन्सटॉलेशन करें —<br />
+conda update conda<br />
+conda update &#8212;all (double dash, not long dash)</p>
+<p><strong>base एनवायरनमेण्ट में प्रोग्रामिंग नहीं करना चाहिये</strong> क्योंकि विभिन्न प्रोग्रामों के लिये अलग−अलग पैकेज इन्सटॉल करने पड़ते हैं जिस कारण एनवायरनमेण्ट में परिवर्तन हो जाता है । तब नया एनवायरनमेण्ट बनाने पर गड़बड़ी हो सकती है क्योंक कोई भी नया एनवायरनमेण्ट केवल बेस एनवायरनमेण्ट द्वारा ही बनता है जिस कारण बेस एनवायरनमेण्ट को नवीनतम वर्सन वाला रहना चाहिये । आजकल पायथन प्रोग्रामिंग के लिये सर्वाधिक आसान और लोकप्रिय पैकेज keras है，अतः <strong>keras में प्रोग्रामिंग करने के लिये पहले उसका एनवायरनमेण्ट बना लें</strong>，बेस एनवायरनमेण्ट के एडमिन मोड में निम्न कमाण्ड द्वारा —</p>
+<p>conda create -n env_keras python=3.8.5 anaconda</p>
+<p>( किसी एनवायरनमेण्ट को पूरी तरह हटाने के लिये बेस एनवायरनमेण्ट के एडमिन मोड में यह कमाण्ड रन करें＝<br />
+conda remove -n envName - -all<br />
+तब C:\ProgramData\Anaconda3\envs में उस एनवायरनमेण्ट को डिलीट कर दें ।)</p>
+<p>आजकल अनाकोण्डा का नवीनतम वर्सन python 3.8.5 के लिये ही है，यद्यपि पायथन का उससे भी आगे का वर्सन रिलीज हो चुका है । पायथन के नये वर्सन के अनुसार अनाकोण्डा को अपडेट करने में औसतन दो महीनों की देरी लगती है । पायथन का नवीनतम वर्सन अनिवार्य हो तो अनाकोण्डा के बदले सीधे पायथन इन्सटॉल करके उसमें प्रोग्रामिंग करनी पड़ेगी，परन्तु उसके लिये विभिन्न पैकेजों को इन्सटॉल करने में बड़ा झंझट है । अतः अनाकोण्डा ही बेहतर है，भले ही दो मास पुराने पायथन से सन्तोष करना पड़े । भविष्य में python 3.8.5 से आगे का पायथन जब अनाकोण्डा के लिये रिलीज हो तो उपरोक्त env_keras के पायथन को भी अपडेट करना पड़ेगा，तब बेहतर होगा कि उस नये पायथन के लिये सम्पूर्ण env_keras को अन−इन्सटॉल करके पूरी प्रक्रिया दोहराकर env_keras पुनः इन्सटॉल करें ताकि विभिन्न पैकेजों में परस्पर तालमेल रहे । <strong>env_keras</strong> बनाने के पश्चात उसे एक्टिवेट कर लें —</p>
+<p>conda activate env_keras</p>
+<p>बेस एनवायरनमेण्ट के एडमिन मोड में env_keras एनवायरनमेण्ट को एक्टिवेट करने पर env_keras का एडमिन मोड वाला ही एनवायरनमेण्ट खुलेगा । <strong>किसी भी एनवायरनमेण्ट के एडमिन मोड में ही उस एनवायरनमेण्ट के लिये उपयुक्त नये पैकेजों को इन्सटॉल कर सकते हैं，परन्तु प्रोग्रामिंग करने के लिये कभी भी किसी एनवायरनमेण्ट के एडमिन मोड का प्रयोग न करें</strong> क्योंकि प्रोग्रामिंग में भूल−चूक से सिस्टम गड़बड़ा सकता है । फिलहाल env_keras के एडमिन मोड वाले एनवायरनमेण्ट में निम्न पैकेजों को इन्सटॉल करें —</p>
+<p>pip install tensorflow</p>
+<p>और तब</p>
+<p>pip install keras</p>
+<p>यदि conda install -c anaconda keras द्वारा keras इन्सटॉल करेंगे तो keras का पुराना वर्सन ही इन्सटॉल होगा，यद्यपि २०१९ ई⋅ में conda द्वारा भी keras का वर्सन−3.8.5 इन्सटॉल हा जाता था，आजकल keras के वर्सन−3.7.0 से आगे का keras इस विधि द्वारा इन्सटॉल नहीं हो पाता，conda में जानबूझकर यह गड़बड़ी की गयी है ताकि नौसीखिये लोग ऑटोमेटिक मशीन लर्निंग से दूर रहें，जबकि ऑटो मशीन लर्निंग तो नौसीखियों के लिये ही बनाया गया है ।</p>
+<p>अनाकोण्डा के लिये बड़ी संख्या में पैकेज बने हैं जो सब के सब इन्सटॉल नहीं करने चाहिये，वरना आपस में लड़ जायेंगे । उन पैकेजों को लाने और हटाने का प्रोग्राम है “conda” जो उक्त कमाण्ड conda update conda रन करने पर अपडेट हो जायगा । अनाकोण्डा के एडमिनिस्ट्रेटिव कमाण्ड प्रॉम्प्ट पर conda update conda लिखकर या पेस्ट करके एण्टर दबाने से ऐसा हो जायगा । इसी विधि द्वारा उपरोक्त सारे कमाण्ड रन कर लें ।</p>
+<p>conda install -c anaconda keras के बदले pip install keras कमाण्ड भी रन कर सकते थे，बात बराबर है ।</p>
+<p>उक्त चारों कमाण्ड सम्पन्न हो जाने के बाद <strong>conda update anaconda</strong> रन करें ताकि keras के साथ समूचे anaconda का तालमेल बैठ जाय । अब आप अनाकोण्डा प्रॉम्प्ट अथवा पाइचार्म पर keras एनवायरनमेयट में पायथन भाषा में कृत्रिम बुद्धि की मशीन लर्निंग वाला प्रोग्राम बना सकते हैं，परन्तु मोड वाले प्रोग्रामों को इसपर न चलायें，उसके लिये अगला लेख है । ।</p>
+<p style="text-align: center;"><span style="color:red"><strong>~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</strong></span></p>
+<h2 id="toc4"><span><span style="color:blue"><strong>डेडिकेटेड GPU प्रोग्रामिंग</strong></span></span></h2>
+<p>यदि आपके कम्प्यूटर में NVIDEA या किसी कम्पनी का डेडिकेटेड ग्राफिक कार्ड (GPU) है तो आप conda install -c anaconda keras के बदले <strong>conda install -c anaconda keras-gpu</strong> रन कर सकते हैं किन्तु base एनवायरनमेण्ट में एसा करने पर मुझे समूचा अनाकोण्डा अन−इन्सटॉल करके पुनः इन्सटॉल करना पड़ गया था क्योंकि तब बिना GPU वाले सारे प्रोग्राम बेकार हो गये！अतः भविष्य में conda install -c anaconda keras-gpu को MyGpu या gpu1 जैसे किसी मनचाहे नाम वाले नये एनवायरनमेण्ट में इन्सटॉल कर सकते हैं जो सैकड़ों लाइब्रेरियों और पैकेजों में परिवर्तन करके उस नये एनवायरनमेण्ट को जीपीयू−प्रोग्रामिंग वाला एनवायरनमेण्ट बना देगा और उसमें CUDA−प्रोग्रामिंग के लिये अनिवार्य cudatoolkits，cudann जैसे पैकेज स्वतः इन्सटॉल कर देगा । CUDA−प्रोग्रामिंग जटिल है，किन्तु सीख लेंगे तो अपने लैपटॉप की कम्प्यूटिंग गति को ३८४ से लेकर सात−आठ हजार गुणा तक बढ़ा सकते हैं，आपके उन प्रोग्रामों के लिये लैपटॉप में छोटे से <strong>मोबाइल सुपरकम्प्यूटर</strong> की शक्ति आ जायगी । किन्तु वैसे प्रोग्राम उन कम्प्यूटरों पर नहीं चलेंगे जिनमें डेडिकेटेड GPU नहीं हैं । अधिकांश लैपटॉपों में अलग से डेडिकेटेड GPU लगाना सम्भव नहीं रहता है ।</p>
+<p>अतः नीचे सामान्य लैपटॉपों और डेस्कटॉपों के लिये उदाहरण प्रस्तुत है जिनमें अलग से डेडिकेटेड GPU नहीं है और केवल सामान्य रैम है ।</p>
+<p style="text-align: center;"><span style="color:red"><strong>~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</strong></span></p>
+<h1 id="toc5"><span><span style="color:red"><strong>अनाकोण्डा प्रॉम्प्ट पर पायथन न्यूरल नेटवर्क मशीन लर्निंग प्रोग्राम</strong></span></span></h1>
+<h2 id="toc6"><span><span style="color:blue"><strong>मशीन लर्निंग के लिये डाटा फाइल</strong></span></span></h2>
+<p>पहले इस फाइल को डाउनलोड करके किसी फोल्डर में रख लें —<br />
+<a href="https://raw.githubusercontent.com/jbrownlee/Datasets/master/pima-indians-diabetes.data.csv">https://raw.githubusercontent.com/jbrownlee/Datasets/master/pima-indians-diabetes.data.csv</a></p>
+<p>इस डाटा का स्रोत यूनिवर्सिटी अॅव कैलिफॅर्निया (इर्विन कैम्पस) है । उसके वेबसाइट पर मशीन लर्निंग हेतु कुल ४८७ डाटासेट हैं — <a href="https://archive.ics.uci.edu/ml/index.php">https://archive.ics.uci.edu/ml/index.php</a></p>
+<p>इस फाइल में ७६८ अमरीकी “पीमा” रेड−इण्डियन महिलाओं के मेडिकल रेकर्ड हैं और उनमें से किन−किन को डायबिटीज है यह भी उल्लेख है । रेकर्ड में निम्न आठ कॉलम हैं —</p>
+<p>१⋅Number of times pregnant<br />
+२⋅Plasma glucose concentration a 2 hours in an oral glucose tolerance test<br />
+३⋅Diastolic blood pressure (mm Hg)<br />
+४⋅Triceps skin fold thickness (mm)<br />
+५⋅2-Hour serum insulin (mu U/ml)<br />
+६⋅Body mass index (weight in kg/(height in m)^2)<br />
+७⋅Diabetes pedigree function<br />
+८⋅Age (years)</p>
+<p>इस फाइल का नाम pima-indians-diabetes.csv रखें । मैंने अपने लैपटॉप के Z: नाम वाले रैमड्राइव में इसे रखा，आप किसी भी ड्राइव और फोल्डर में रख सकते हैं किन्तु उसका सही पथ निम्न प्रोग्राम में रहना चाहिये，मेरे फाइल का पथ Z:\PythonPrograms है ।</p>
+<p style="text-align: center;"><span style="color:red"><strong>~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</strong></span></p>
+<h2 id="toc7"><span><span style="color:blue"><strong>प्रोग्राम की पूवपीठिका</strong></span></span></h2>
+<p>अब मानव मस्तिष्क के न्यूरल नेटवर्क की नकल पर बने कृत्रिम न्यूरल नेटवर्क (<strong>ANN</strong> Artificial Neural Network) द्वारा उपरोक्त मेडिकल डाटा की स्वचालित जाँच कराकर देखते हैं कि कृत्रिम बुद्धि द्वारा डायबिटीज की भविष्यवाणी सम्भव है या नहीं । यहाँ वास्तविक भविष्यवाणी नहीं की जा रही है किन्तु इसी प्रोग्राम में किसी नये व्यक्ति के इसी प्रकार के मेडिकल आँकड़े डाले जाय तो यह प्रोग्राम बता देगा कि उस व्यक्ति को डायबिटीज होने की सम्भावना है या नहीं，अतः इस प्रोग्राम के लिये भविष्यवाणी शब्द का प्रयोग सही है ।</p>
+<p>पहले पूरे प्रोग्राम को सही तरीके से चलाने का तरीका स्पष्ट कर लें，बाद में प्रोग्राम की बारीकियाँ और प्रोग्राम में प्रयुक्त तकनीकी शब्दों के अर्थों की पड़ताल करेंगे ।</p>
+<p>अनाकोण्डा के एडमिन मोड वाले कमाण्ड प्रॉम्प्ट पर मैंने यह प्रोग्राम चलाकर उसके स्क्रीनशॉट का कुछ हिस्सा संलग्न किया है，किन्तु उचित यही है कि अनाकोण्डा के एडमिन मोड वाले कमाण्ड प्रॉम्प्ट पर केवल दो कार्य ही करने चाहिये — अनाकोण्डा के पैकेजों में फेरबदल और नये एनवायरनमेण्ट आदि का निर्माण，तथा अपना कोई ऐसा प्रोग्राम चलाना जो सिस्टम ड्राइव पर फाइल बनाना या मिटाना या रीड−राइट करता हो ।</p>
+<p>सबसे पहला कार्य है अनाकोण्डा के एडमिन मोड वाले अथवा सामान्य कमाण्ड प्रॉम्प्ट से “पायथन” की प्रोग्रामिंग मोड में प्रवेश । इसके लिये कमाण्ड प्रॉम्प्ट पर python लिखकर एण्टर दबा दें，<strong>&gt; &gt; &gt;</strong> आ जायगा जो इस बात का सबूत है कि अब आप पायथन प्रोग्रामिंग भाषा में प्रोग्राम लिखने वाले पायथन विण्डो में हैं ।</p>
+<p><span style="font-size:200%;"><span style="color:RGB(255,0,255)"><strong>यह पूरा उदाहरण सिक्वेन्शल−मॉडल के मल्टी लेयर परसेप्ट्रॉन न्यूरल नेटवर्क (MLP : Multi-Layer Perceptron) पर आधारित है ।</strong></span></span></p>
+<p>उसके बाद निम्न कोड एक बार में ही पूरा पेस्ट कर सकते हैं，अथवा एक−एक पङ्क्ति पेस्ट करके एण्टर दबाते जाय，प्रोग्राम का उतना हिस्सा रन (एग्जेक्यूट) होता जायगा —</p>
+<p>यह है सम्पूर्ण प्रोग्राम —<br />
+▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃<br />
+from numpy import loadtxt<br />
+from tensorflow.keras.models import Sequential<br />
+from tensorflow.keras.layers import Dense<br />
+import tensorflow as tf<br />
+tf.compat.v1.get_default_graph</p>
+<p>dataset = loadtxt('Z:\Z_GPU\PythonPrograms\pima-indians-diabetes.csv', delimiter=',')</p>
+<p>X = dataset[:,0:8]<br />
+y = dataset[:,8]<br />
+model = Sequential()<br />
+model.add(Dense(12, input_dim=8, activation='relu'))<br />
+model.add(Dense(8, activation='relu'))<br />
+model.add(Dense(1, activation='sigmoid'))<br />
+model.compile(loss='binary_crossentropy', optimizer='adam', metrics=['accuracy'])<br />
+model.fit(X, y, epochs=30, batch_size=10)<br />
+_, accuracy = model.evaluate(X, y)<br />
+print('Accuracy: %.2f' % (accuracy*100))<br />
+▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃</p>
+<p>केरस और टेन्सरफ्लो में कई बार वर्सन में अन्तर के कारण प्रोग्राम चल नहीं पाते हैं । keras. के स्थान पर सारे इम्पोर्ट कमानों में tensorflow.keras. प्रयोग करेंगे तो यह समस्या नहीं आयगी，इण्टानेट के ट्यूटोरियलों में प्रायः इस बात का उल्लेख नहीं रहता है । निम्न दो पङ्क्तियाँ देने पर टेन्सरफ्लो का कम्पैटिबल वर्सन अपना टेन्सर−ग्राफ बना देगा —<br />
+import tensorflow as tf<br />
+tf.compat.v1.get_default_graph</p>
+<p>पायथन में प्रवेश और प्रोग्राम की पहली पङ्क्ति रन करके दूसरी पङ्क्ति पेस्ट या टाइप करने के बाद पहले संलग्न फोटो की तरह कमाण्ड विण्डो दिखेगा ।</p>
+<div class="image-container alignleft"><img src="../vedicastrology.wdfiles.com/local--files/machine-learning-starter/1.jpg" alt="1.jpg" class="image" /></div>
+<p style="text-align: center;"><span style="color:red"><strong>~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</strong></span></p>
+<h2 id="toc8"><span><span style="color:blue"><strong>न्यूरल नेटवर्क की ट्रेनिंग</strong></span></span></h2>
+<p>न्यूरल नेटवर्क की ट्रेनिंग इस एक पङ्क्ति द्वारा होती है —</p>
+<p>model.fit(X, y, epochs=150, batch_size=10)</p>
+<p>किन्तु उक्त पङ्क्ति में verbose=0 जोड़कर लिखें तो हर पङ्क्ति की रिपोर्ट दिखाने में प्रोग्राम समय नष्ट नहीं करेगा ।<br />
+model.fit(X, y, epochs=150, batch_size=10, verbose=0 )</p>
+<p style="text-align: center;"><span style="color:red"><strong>~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</strong></span></p>
+<h2 id="toc9"><span><span style="color:blue"><strong>प्रोग्राम का परिणाम</strong></span></span></h2>
+<p>निम्न दो पङ्क्तियाँ परिणाम दिखा देगा —</p>
+<p>_, accuracy = model.evaluate(X, y)<br />
+print('Accuracy: %.2f' % (accuracy*100))</p>
+<div class="image-container alignleft"><img src="../vedicastrology.wdfiles.com/local--files/machine-learning-starter/2.jpg" alt="2.jpg" class="image" /></div>
+<p>प्रोग्राम स्वंय बता रहा है कि औसत accuracy ＝76.82% की है । इसी प्रोग्राम को पायचार्म PyCharm में रन करने पर accuracy ＝७७⋅२१% मिला । कमाण्ड प्रॉम्प्ट या पायचार्म में इसी प्रोग्राम को जितनी बार रन करेंगे，अलग−अलग accuracy मिलेगी तो त्रुटि नहीं है बल्कि सांख्यिकी पर आधारित पद्धति का फल है । accuracy कभी भी १००% नहीं होगी，क्योंकि १००% का अर्थ है कि किसी सही समीकरण द्वारा परिणाम निकाला जा रहा है और जब समीकरण पता है तो मशीन लर्निंग वाली कृत्रिम बुद्धि की आवश्यकता ही नहीं है ।<br />
+( epochs=30000, batch_size=200 करने पर समय पहले की तरह केवल ढाइ मिनट किन्तु Accuracy: 84.77%!)</p>
+<p style="text-align: center;"><span style="color:red"><strong>~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</strong></span></p>
+<h2 id="toc10"><span><span style="color:blue"><strong>भविष्यवाणी का प्रोग्रामर</strong></span></span></h2>
+<p>ऊपर “प्रोग्राम का परिणाम” अनुच्छेद के अन्तर्गत जो दो पङ्क्तियाँ हैं वे न्यूरल नेटवर्क की ट्रेनिंग की accuracy जानने के लिये हैं । उन दो पङ्क्तियों को हटाकर और मॉडल−फिट में verbose=0 जोड़कर，जैसा कि ऊपर वर्णित है，प्रोग्राम के अन्त में निम्न पङ्क्ति जोड़ दें तो पूरा प्रोग्राम “भविष्यवक्ता” मोड में कार्य करने लगेगा ।</p>
+<p>predictions = model.predict_classes(X)</p>
+<p>भविष्यवाणी करने में प्रोग्राम कितना कुशल या अकुशल है इसकी जाँच के लिये अन्त में निम्न पङ्क्तियाँ जोड़ दें，यहाँ ५ लिखा है जिसका अर्थ यह है कि केवल ५ लोगों के बारे में भविष्यवाणी की रिपोर्ट देखनी है，५ को आप घटा−बढ़ा सकते हैं ।</p>
+<p>for i in range(5):<br />
+print('%s =&gt; %d (expected %d)' % (X[i].tolist(), predictions[i], y[i]))</p>
+<p>यदि डाटाबेस में लोगों की कुल संख्या १०० हो और प्रोग्राम की accuracy ७६% हो तो १०० में से ७६ लोगों में डायबिटीज के होने या न होने के बारे में प्रोग्राम सही भविष्यवाणी करेगा और शेष २४ लोगों के बारे में गलत भविष्यवाणी करेगा । एक्यूरेसी बढ़ाने के बहुत से तरीके हैं जो आगे की बात है ।</p>
+<p style="text-align: center;"><span style="color:red"><strong>~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</strong></span></p>
+<h2 id="toc11"><span><span style="color:blue"><strong>प्रोग्राम का तकनीकी विवरण</strong></span></span></h2>
+<p>यह प्रोग्राम मैंने नहीं बनाया，निम्न वेबसाइट पर यह पहले से लोड था —<br />
+<a href="https://machinelearningmastery.com/tutorial-first-neural-network-python-keras/">https://machinelearningmastery.com/tutorial-first-neural-network-python-keras/</a></p>
+<p>उक्त वेबसाइट पर इस प्रोग्राम की सभी पङ्क्तियों के अर्थों और कार्यों का स्पष्टीकरण किया गया है，और उतने ही स्पष्टीकरण से समझ में न आये तो उनमें प्रयुक्त तकनीकी शब्दों की विस्तृत व्याख्यायें विकिपेडिया और गूगल सर्च द्वारा पता लगा सकते हैं ।</p>
+<p>किन्तु अनाकोण्डा इन्सटॉल करने और उसपर प्रोग्राम चलाने के बारे में नेट पर जितने भी ट्यूटोरियल हैं वे ऐसे लोग लिखते हैं जिनको इस बात से सरोकार नहीं है कि नौसीखियों के लिये किस तरह लिखना चाहिये । पहली बार मैंने अनाकोण्डा के बेस एनवायरनमेण्ट में केरास−जीपीयू इन्सटॉल कर दिया तो पूरा अनाकोण्डा ही केवल जीपीयू−प्रोग्रामिंग के लिये परिवर्तित हो गया और गैर−जीपीयू वाला कोई प्रोग्राम उसपर नहीं चल पाया । केरास−जीपीयू हटाने पर भी कोई सुधार नहीं हुआ क्योंकि पूरा एनवायरनमेण्ट ही जीपीयू−प्रोग्रामिंग के लिये ढाला जा चुका था । अतः समूचा अनाकोण्डा और पाइचार्म अन−इन्सटॉल करके पुनः इन्सटॉल करना पड़ा，दो बार डाउनलोड करने के कारण कुल ७ जीबी डाउनलोडिंग！इसी तरह पाइचार्म में केरास इन्सटॉल करने के जितने तरीके मैंने नेट पर पढ़ें वे सब व्यर्थ सिद्ध हुए，केरास ही नहीं बल्कि कोई भी पैकेज पाइचार्म में इन्सटॉल करने पर पाइचार्म हैंग कर जाता था और ऑल्ट＋कण्ट्रोल＋डिलीट में जाकर उसे बन्द करना पड़ता था । नेट से कोई सहायता नहीं मिली क्योंकि नेट पर सब के सब पूर्ण विशेषज्ञ थे जो यह बताने के लिये तैयार ही नहीं थे कि पाइचार्म में कुछ भी तभी इन्सटॉल होगा जब एडमिनिस्ट्रेटिव मोड में पाइचार्म रन किया जाय — जैसा कि अनाकोण्डा के बारे में मैंने ऊपर लिखा है । पाइचार्म का सही प्रयोग सीख लेंगे तो वह अनाकोण्डा चलाने के लिये अनाकोण्डा के अपने कमाण्ड प्रॉम्प्ट से भी बेहतर सॉफ्टवेयर है ।</p>
+<p>पायथन प्रोग्रामिंग भाषा सीखने के लिये यह सबसे विस्तृत ट्यूटोरियल है —<br />
+<a href="https://docs.python.org/3/tutorial/index.html">https://docs.python.org/3/tutorial/index.html</a><br />
+पायथन प्रोग्रामिंग，अनाकोण्डा और बहुत से सम्बन्धित विषयों के वीडियो और नमूने भी गूगल सर्च द्वारा मिल जायेंगे । मशीन लर्निंग के सभी तकनीकी शब्दों की विस्तृत व्याख्या विकिपेडिया में मिल जायगी । कोई समस्या हो तो फेसबुक के ग्रुप “कृत्रिम बुद्धि की कार्यशाला” में पूछें ।</p>
+<p>इन्सटॉलेशन के लिये इस वेबसाइट पर अच्छी सहायता मिलेगी —<br />
+<a href="https://i-systems.github.io/IoT/html/hw/Python Installation Instructions_new.html">https://i-systems.github.io/IoT/html/hw/Python%20Installation%20Instructions_new.html</a></p>
+<p style="text-align: center;"><span style="color:red"><strong>~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</strong></span></p>
+<h2 id="toc12"><span><span style="color:blue"><strong>फाइल डाउनलोड लिंक</strong></span></span></h2>
+<p>कुछ लोगों को <strong>pima-indians-diabetes.csv</strong> फाइल डाउनलोड करने में कठिनाई हो रही है，वे इस वेबपृष्ठ के नीचे “फाइल” टैब क्लिक करके डाउनलोड कर सकते हैं ।</p>
+<p>वहीं एक और फाइल <strong>keras_first_network.py</strong> मिलेगा जिसमें “प्रेडिक्शन” वाला अन्तिम अंश छोड़कर “एक्यूरेसी” तक का पूरा प्रोग्राम है जिसे क्लिक करने पर वह प्रोग्राम पाइचार्म में स्वतः खुल जायगा，बशर्ते पाइचार्म ठीक से इन्सटॉल हुआ हो । यह “पायथन स्क्रिप्ट” फाइल है ।</p>
+<p style="text-align: center;"><span style="color:red"><strong>~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</strong></span></p>
+<h1 id="toc13"><span><span style="color:red"><strong>पायथन के विभिन्न ग्राफिक यूजर इण्टरफेसों पर प्रोग्रामिंग</strong></span></span></h1>
+<p><span style="color:red"><strong>मशीन लर्निंग प्रोग्रामर बनना चाहते हैं तो अनाकोण्डा कमाण्ड प्रॉम्प्ट में ही पायथन प्रोग्रामिंग का अभ्यास बनायें，इसमें आप अधिक साधनों का प्रयोग कर सकेंगे ।</strong></span></p>
+<h2 id="toc14"><span><span style="color:blue"><strong>PyCharm में सम्पूर्ण उपरोक्त प्रोग्राम</strong></span></span></h2>
+<p>( epochs=30000, batch_size=200 करने पर समय पहले की तरह केवल ढाइ मिनट किन्तु Accuracy: 84.77%!)</p>
+<div class="image-container alignleft"><img src="../vedicastrology.wdfiles.com/local--files/machine-learning-starter/3.jpg" alt="3.jpg" class="image" /></div>
+<h2 id="toc15"><span><span style="color:blue"><strong>SPYDER</strong></span></span></h2>
+<p>अनाकोण्डा के प्रॉम्प्ट पर spyder टाइप करके एण्टर दबाने पर कुछ काल में यह प्रोग्राम खुल जायगा । इसमें बायीं ओर के विण्डो में उपरोक्त पूरा प्रोग्राम पेस्ट करके रन करेंगे तो पाइचार्म की तरह परिणाम मिलेगा，मेरी मशीन में जो परिणाम spyder ने दिखाया वह संलग्न स्क्रीनशॉट में है । कई लोग शिकायत करते हैं कि spyder में मशीन लर्निंग के प्रोग्राम कई बार error मेसेज देने लगते हैं，किन्तु इस प्रोग्राम में spyder ने सही परिणाम बताया । पाइचार्म सम्पूर्ण प्रोग्रामिंग हेतु spyder से बेहतर है किन्तु spyder का भी अभ्यास कर लें ।<br />
+( epochs=30000, batch_size=200 करने पर समय पहले की तरह केवल ढाइ मिनट किन्तु Accuracy: 84.77%!)</p>
+<div class="image-container alignleft"><img src="../vedicastrology.wdfiles.com/local--files/machine-learning-starter/4.jpg" alt="4.jpg" class="image" /></div>
+<p style="text-align: center;"><span style="color:red"><strong>~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</strong></span></p>
+<h2 id="toc16"><span><span style="color:blue"><strong>JUPYTER NOTEBOOK</strong></span></span></h2>
+<p>अनाकोण्डा द्वारा जुपिटर−नोटबुक खोलें और उसमें उपरोक्त कोड ज्यों का त्यों पेस्ट कर दें और रन करें，निम्न स्क्रीनशॉट की तरह परिणाम मिलेगा ।</p>
+<div class="image-container alignleft"><img src="../vedicastrology.wdfiles.com/local--files/machine-learning-starter/5.jpg" alt="5.jpg" class="image" /></div>
+<p style="text-align: center;"><span style="color:red"><strong>~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</strong></span></p>
+<h1 id="toc17"><span><span style="color:red"><strong>मॉडल सेविंग का सर्वोत्तम उपाय</strong></span></span></h1>
+<p>न्यूरल ट्रेनिंग में समय लगता है और हर बार अलग−अलग एक्यूरेसी आती है । हो सकता है हर बार ७०% से ८०% की एक्यूरेसी आये और एक बार संयोग से ९९% एक्यूरेसी आये जो बार−बार प्रयास करने पर भी फिर कभी न आये । न्यूरल नेटवर्क की पद्धति सांख्यिकी पर आधारित स्टोकैस्टिक पद्धति है जिस कारण हर बार अलग परिणाम मिलते हैं । अतः प्रोग्राम के अन्त में निम्न एक पङ्क्ति जोड़ देंगे तो पूरे न्यूरल मॉडल का ट्रेण्ड आर्किटेक्चर समस्त weights के साथ सुरक्षित हो जायगा，और भविष्य में उस सेव्ड मॉडल द्वारा सीधे प्रेडिक्शन कर सकते हैं，यदि उसकी एक्यूरेसी ९९% है तो हर बार परिणाम ९९% ही मिलेगा । अतः प्रोग्राम को ट्रेण्ड करते समय पहली बार model1.h5 नाम से सेव करें，दूसरी बार model2.h5 नाम से，तीसरी बार model3.h5 नाम से⋅⋅⋅⋅⋅⋅ ⋅⋅⋅⋅⋅⋅ आदि । बाद में उनमें से जो सर्वाधिक एक्यूरेसी वाला हो केवल उसे बचाकर रखें，शेष समस्त .h5 फाइलों को डिलीट कर दें । इस प्रकार औसतन ७५% के आसपास एक्यूरेसी देने वाले प्रोग्राम से भी आप ९०% से अधिक एक्यूरेसी वाला मॉडल प्राप्त कर सकते हैं जो सदा काम देगा ।</p>
+<p>(append to a python program at its end) ＝<br />
+▒░▓▒░▓▒░▓▒░▓▒░▓▒░▓▒░▓▒░▓▒░▓▒░▓</p>
+<ol>
+<li>save model and architecture to single file</li>
+</ol>
+<p>model.save(&quot;Z:\Z_GPU\PythonPrograms\model.h5&quot;)<br />
+print(&quot;Saved model to disk&quot;)<br />
+▒░▓▒░▓▒░▓▒░▓▒░▓▒░▓▒░▓▒░▓▒░▓▒░▓<br />
+उस सेव्ड मॉडल द्वारा बाद में जब मूल्याङ्कन (या प्रेडिक्शन) करना हो तो यह कोड चलायें —</p>
+<p>ब्रैकेट के भीतर पूरी पङ्क्ति का अर्थ है कि वह पङ्क्ति प्रोग्राम का अङ्ग नहीं है，केवल आपको समझाने के लिये है，उन पङ्क्तियों को प्रोग्राम के भीतर स्मरणार्थ रखना चाहते हैं तो ब्रैकेट हटाकर पङ्क्ति के आरम्भ में # चिह्न डाल दें ।</p>
+<p>( load and evaluate a saved model)<br />
+from numpy import loadtxt<br />
+from tensorflow.keras.models import load_model</p>
+<p>model = load_model(&quot;Z:\Z_GPU\PythonPrograms\/model.h5&quot;)<br />
+model.summary()<br />
+dataset = loadtxt(&quot;Z:\Z_GPU\PythonPrograms\pima-indians-diabetes.csv&quot;, delimiter=&quot;,&quot;)<br />
+X = dataset[:,0:8]<br />
+Y = dataset[:,8]<br />
+score = model.evaluate(X, Y, verbose=0)<br />
+print(&quot;%s: %.2f%%&quot; % (model.metrics_names[1], score[1]*100))<br />
+▒░▓▒░▓▒░▓▒░▓▒░▓▒░▓▒░▓▒░▓▒░▓▒░▓<br />
+Saving and loading best model checkpoint :-<br />
+<a href="https://machinelearningmastery.com/check-point-deep-learning-models-keras/">https://machinelearningmastery.com/check-point-deep-learning-models-keras/</a><br />
+❃❄❅❉❀✰✪❁❂✾✽❊❃❄❅❉❀✰✪❁❂✾✽❊<br />
+प्रेडिक्शन के लिये यह सिण्टैक्स है —<br />
+model.predict(X)<br />
+########################################<br />
+sklearn मॉडल को सेव करने के लिये इस वेबसाइट को पढ़ें —<br />
+<a href="http://machinelearningmastery.com/save-load-machine-learning-models-python-scikit-learn/">http://machinelearningmastery.com/save-load-machine-learning-models-python-scikit-learn/</a></p>
+
+                    </div>
+
+                    
+
+
+                    
+
+
+
+                    
+
+                    <div id="page-info-break"></div>
+                    
+                        <div id="page-options-container">
+                            <div id="page-info">page revision: 71, last edited: <span class="odate time_1620596295 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%20%28%25O%20ago%29">09 May 2021 21:38</span></div>
+            <div id="page-options-bottom"  class="page-options-bottom">
+            <a href="javascript:;" class="btn btn-default" id="edit-button">Edit</a>
+<a href="javascript:;" class="btn btn-default" id="tags-button">Tags</a>
+
+<a href="javascript:;" class="btn btn-default" id="history-button">History</a>
+<a href="javascript:;" class="btn btn-default" id="files-button">Files</a>
+<a href="javascript:;" class="btn btn-default" id="print-button">Print</a>
+<a href="javascript:;" class="btn btn-default" id="site-tools-button">Site tools</a>
+<a href="javascript:;" class="btn btn-default" id="more-options-button">+&nbsp;Options</a> 
+</div>
+<div id="page-options-bottom-2" class="page-options-bottom form-actions" style="display:none">
+    <a href="javascript:;" class="btn btn-default" id="edit-sections-button">Edit Sections</a>
+    <a href="javascript:;" class="btn btn-default" id="edit-append-button">Append</a>
+    <a href="javascript:;" class="btn btn-default" id="edit-meta-button">Edit Meta</a>
+    <a href="javascript:;" class="btn btn-default" id="watchers-button">Watchers</a> 
+    <a href="javascript:;" class="btn btn-default" id="backlinks-button">Backlinks</a> 
+    <a href="javascript:;" class="btn btn-default" id="view-source-button">Page Source</a> 
+    <a href="javascript:;" class="btn btn-default" id="parent-page-button">Parent</a> 
+    <a href="javascript:;" class="btn btn-default" id="page-block-button">Lock Page</a>    
+    <a href="javascript:;" class="btn btn-default" id="rename-move-button">Rename</a> 
+    <a href="javascript:;" class="btn btn-default" id="delete-button">Delete</a> 
+</div>
+<div id="page-options-area-bottom">
+</div>
+
+                        </div>
+                    
+                    <div id="action-area" style="display: none;"></div>
+                </div>
+            </div>
+            
+            
+            
+            <div id="footer" style="display: block; visibility: visible;">
+                <div class="options" style="display: block; visibility: visible;">
+    <a href="http://www.wikidot.com/doc" id="wikidot-help-button">Help</a>
+    &nbsp;|
+    <a href="http://www.wikidot.com/legal:terms-of-service" id="wikidot-tos-button">Terms of Service</a>
+    &nbsp;|
+    <a href="http://www.wikidot.com/legal:privacy-policy" id="wikidot-privacy-button">Privacy</a>
+    &nbsp;|
+    <a href="javascript:;" id="bug-report-button" onclick="WIKIDOT.page.listeners.pageBugReport(event)">Report a bug</a>
+    &nbsp;|
+    <a href="javascript:;" id="abuse-report-button" onclick="WIKIDOT.page.listeners.flagPageObjectionable(event)">Flag as objectionable</a>
+</div>
+Powered by <a href="http://www.wikidot.com/">Wikidot.com</a> 
+            </div>
+            
+                <div id="license-area" class="license-area">
+                    Unless otherwise stated, the content of this page is licensed under<!--Creative Commons License--> <a rel="license" href="http://creativecommons.org/licenses/by-nc/2.5/">Creative Commons Attribution-Noncommercial 2.5  License</a>.<!--/Creative Commons License--><!-- <rdf:RDF xmlns="http://web.resource.org/cc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+	<Work rdf:about="">
+		<license rdf:resource="http://creativecommons.org/licenses/by-nc/2.5/" />
+	</Work>
+	<License rdf:about="http://creativecommons.org/licenses/by-nc/2.5/"><permits rdf:resource="http://web.resource.org/cc/Reproduction"/><permits rdf:resource="http://web.resource.org/cc/Distribution"/><requires rdf:resource="http://web.resource.org/cc/Notice"/><requires rdf:resource="http://web.resource.org/cc/Attribution"/><prohibits rdf:resource="http://web.resource.org/cc/CommercialUse"/><permits rdf:resource="http://web.resource.org/cc/DerivativeWorks"/></License></rdf:RDF> -->
+
+                </div>
+            
+            
+            
+
+
+
+            <div id="extrac-div-1"><span></span></div><div id="extrac-div-2"><span></span></div><div id="extrac-div-3"><span></span></div>
+            
+            
+            
+            
+                
+            
+        </div>
+        
+    </div>
+<!-- These extra divs/spans may be used as catch-alls to add extra imagery. -->
+<div id="extra-div-1"><span></span></div><div id="extra-div-2"><span></span></div><div id="extra-div-3"><span></span></div>
+<div id="extra-div-4"><span></span></div><div id="extra-div-5"><span></span></div><div id="extra-div-6"><span></span></div>
+</div>
+
+
+
+
+</div>
+<div id="dummy-ondomready-block" style="display: none;" ></div>
+    <!-- Google Analytics load -->
+    <script type="text/javascript">
+        (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+
+    <!-- Quantcast -->
+    <script type="text/javascript">
+    _qoptions={
+        qacct:"p-edL3gsnUjJzw-"
+    };
+    (function() {
+        var qc = document.createElement('script'); qc.type = 'text/javascript'; qc.async = true;
+        qc.src = ('https:' == document.location.protocol ? 'https://secure' : 'http://edge') + '.quantserve.com/quant.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(qc, s);
+    })();
+    </script>
+    <noscript>
+        <img src="../pixel.quantserve.com/pixel/p-edL3gsnUjJzw-.gif" style="display: none;" border="0" height="1" width="1" alt="Quantcast"/>
+    </noscript>
+
+
+
+
+<div id="page-options-bottom-tips" style="display: none;">
+    <div id="edit-button-hovertip">
+        Click here to edit contents of this page.    </div>
+</div>
+<div id="page-options-bottom-2-tips"  style="display: none;">
+    <div id="edit-sections-button-hovertip">
+        Click here to toggle editing of individual sections of the page (if possible).         Watch headings for an &quot;edit&quot; link when available.    </div>
+    <div id="edit-append-button-hovertip">
+        Append content without editing the whole page source.    </div>
+    <div id="history-button-hovertip">
+        Check out how this page has evolved in the past.    </div>
+    <div id="discuss-button-hovertip">
+        If you want to discuss contents of this page - this is the easiest way to do it.    </div>
+    <div id="files-button-hovertip">
+        View and manage file attachments for this page.    </div>
+    <div id="site-tools-button-hovertip">
+        A few useful tools to manage this Site.    </div>
+    <div id="backlinks-button-hovertip">
+        See pages that link to and include this page.    </div>
+    <div id="rename-move-button-hovertip">
+        Change the name (also URL address, possibly the category) of the page.    </div>
+    <div id="view-source-button-hovertip">
+        View wiki source for this page without editing.    </div>
+    <div id="parent-page-button-hovertip">  
+        View/set parent page (used for creating breadcrumbs and structured layout).    </div>
+            <div id="abuse-report-button-hovertip">
+            Notify administrators if there is objectionable content in this page.        </div>
+        <div id="bug-report-button-hovertip">
+            Something does not work as expected? Find out what you can do.        </div>
+        <div id="wikidot-help-button-hovertip">
+            General Wikidot.com documentation and help section.        </div>
+        <div id="wikidot-tos-button-hovertip">
+            Wikidot.com Terms of Service - what you can, what you should not etc.        </div>
+        <div id="wikidot-privacy-button-hovertip">
+            Wikidot.com Privacy Policy.          
+        </div>
+    </div>
+</body>
+
+<!-- Mirrored from vedicastrology.wikidot.com/machine-learning-starter by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 27 May 2022 16:49:22 GMT -->
+</html>

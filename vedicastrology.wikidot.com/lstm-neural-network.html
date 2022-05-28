@@ -1,0 +1,707 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+
+<!-- Mirrored from vedicastrology.wikidot.com/lstm-neural-network by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 27 May 2022 16:49:45 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+    <title>LSTM Neural Network - Vedic Astrology</title>
+    
+    
+    
+    <script type="text/javascript" src="../d3g0gp89917ko0.cloudfront.net/v--291054f06006/common--javascript/init.combined.js"></script>
+    <script  type="text/javascript">
+        var URL_HOST = 'www.wikidot.com';
+        var URL_DOMAIN = 'wikidot.com';
+        var USE_SSL =  true ;
+        var URL_STATIC = 'http://d3g0gp89917ko0.cloudfront.net/v--291054f06006';
+        // global request information
+        
+        var WIKIREQUEST = {};
+        WIKIREQUEST.info = {};
+        
+        WIKIREQUEST.info.domain = "vedicastrology.wikidot.com";
+        WIKIREQUEST.info.siteId = 92260;
+        WIKIREQUEST.info.siteUnixName = "vedicastrology";
+        WIKIREQUEST.info.categoryId = 508976;
+        WIKIREQUEST.info.themeId = 82723;
+        WIKIREQUEST.info.requestPageName = "lstm-neural-network";
+        OZONE.request.timestamp = 1653669551;
+        OZONE.request.date = new Date();
+        WIKIREQUEST.info.lang = 'en';
+                WIKIREQUEST.info.pageUnixName = "lstm-neural-network";
+        WIKIREQUEST.info.pageId = 925811480;
+                        WIKIREQUEST.info.lang = "en";
+        OZONE.lang = "en";
+        var isUAMobile = !!/Android|webOS|iPhone|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    </script>
+    
+    
+
+
+    
+        <script  type="text/javascript">
+    
+        require.config({
+            baseUrl: URL_STATIC + '/common--javascript',
+            paths: {
+                'jquery.ui': 'jquery-ui.min',
+                'jquery.form': 'jquery.form'
+            }
+        });
+    
+    </script>
+    
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8"/>
+            
+    
+    
+    
+    
+    <meta http-equiv="content-language" content="en"/>
+    <script type="text/javascript" src="../d3g0gp89917ko0.cloudfront.net/v--291054f06006/common--javascript/WIKIDOT.combined.js"></script>
+        
+    
+    <style type="text/css" id="internal-style">
+        
+        /* modules */
+        
+                
+        /* theme */
+                    @import url(../d3g0gp89917ko0.cloudfront.net/v--291054f06006/common--theme/base/css/style.css);
+                    @import url(../vedicastrology.wdfiles.com/local--theme/simple/style.css);
+            </style>
+    
+        
+        
+        
+    <link rel="shortcut icon" href="local--favicon/favicon.gif"/>
+    <link rel="icon" type="image/gif" href="local--favicon/favicon.gif"/>
+    
+            <link rel="apple-touch-icon" href="common--images/apple-touch-icon-57x57.png" />
+        <link rel="apple-touch-icon" sizes="72x72" href="common--images/apple-touch-icon-72x72.png" />
+        <link rel="apple-touch-icon" sizes="114x114" href="common--images/apple-touch-icon-114x114.png" />
+        
+        
+            <link rel="alternate" type="application/wiki" title="Edit this page" href="javascript:WIKIDOT.page.listeners.editClick()"/>
+    
+        <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-18234656-1']);
+        _gaq.push(['_setDomainName', 'none']);
+        _gaq.push(['_setAllowLinker', true]);
+        _gaq.push(['_trackPageview']);
+
+        _gaq.push(['old._setAccount', 'UA-68540-5']);
+        _gaq.push(['old._setDomainName', 'none']);
+        _gaq.push(['old._setAllowLinker', true]);
+        _gaq.push(['old._trackPageview']);
+
+            </script>
+    
+    <script type="text/javascript">
+        window.google_analytics_uacct = 'UA-18234656-1';
+        window.google_analytics_domain_name = 'none';
+    </script>
+    
+        <link rel="manifest" href="onesignal/manifest.html" />
+    <script src="../cdn.onesignal.com/sdks/OneSignalSDK.js" acync=""></script>
+    <script>
+        var OneSignal = window.OneSignal || [];
+        OneSignal.push(function() {
+          OneSignal.init({
+            appId: null,
+          });
+        });
+    </script>
+        
+</head>
+<body id="html-body">
+<div id="skrollr-body">
+<a name="page-top"></a>
+
+
+
+
+
+<div id="container-wrap-wrap">
+    <div id="container-wrap">
+        <div id="container">
+            <div id="header">
+              <h1><a href="index.html"><span>Vedic Astrology</span></a></h1>
+                
+                    <h2><span>Vedic Jyotisha Unravelled !</span></h2>
+                
+                
+                <!-- google_ad_section_start(weight=ignore) -->
+                
+                <div id="search-top-box" class="form-search">
+    <form id="search-top-box-form" action="http://vedicastrology.wikidot.com/dummy" class="input-append">
+        <input id="search-top-box-input" class="text empty search-query" type="text" size="15" name="query" value="Search this site" onfocus="if(YAHOO.util.Dom.hasClass(this, 'empty')){YAHOO.util.Dom.removeClass(this,'empty'); this.value='';}"/><input class="button btn" type="submit" name="search" value="Search"/>
+    </form>
+</div>
+                
+                
+                    <div id="top-bar">
+                        
+
+<ul>
+<li><a href="javascript:;">Tutorial</a>
+<ul>
+<li><a href="start.html">Start</a></li>
+<li><a href="overview.html">Overview</a></li>
+<li><a href="hindu-calendar.html">Hindu Calendar</a></li>
+<li><a href="planetary-traits-1.html">Planetary Traits-1</a></li>
+<li><a href="origin-and-meaning-of-horoscopic-houses.html">Origin and Meaning of Horoscopic Houses</a></li>
+<li><a href="own-sign-exaltation-and-moola-trikona-of-nodes.html">Own Sign, Exaltation and Moola Trikona of Nodes</a></li>
+<li><a href="friendships.html">Friendships</a></li>
+<li><a href="how-to-make-correct-predictions.html">How To Make Correct Predictions</a></li>
+<li><a href="ayanamsha-vs-precession.html">Ayanamsha vs Precession</a></li>
+<li><a href="bhaavachalita.html">Bhaavachalita</a></li>
+<li><a href="udaya-asta-or-heliacal-risings-and-settings.html">Udaya-Asta or Heliacal Risings and Settings</a></li>
+<li><a href="origin-of-150-naadis.html">Origin of 150 Naadis</a></li>
+<li><a href="vimshottari-year-length.html">Vimshottari Year Length</a></li>
+<li><a href="dashaa-level-nomenclature.html">Dashaa-Level Nomenclature</a></li>
+<li><a href="sudarshana-chakra.html">Sudarshana Chakra</a></li>
+<li><a href="arudha-pada-and-other-padas.html">Arudha-pada and Other Padas</a></li>
+<li><a href="ashtaka-varga.html">Ashtaka Varga</a></li>
+<li><a href="vipareet-raja-yoga.html">Vipareet Raja Yoga</a></li>
+<li><a href="karakamsha.html">Karakamsha</a></li>
+<li><a href="planetary-war.html">Planetary War</a></li>
+<li><a href="md-and-ad-results-laghu-parashari.html">MD and AD results - Laghu Parashari</a></li>
+<li><a href="strength-of-a-house.html">Strength of a House</a></li>
+<li><a href="four-purusharthas-as-four-trikonas-in-horoscope.html">Four Purusharthas as Four Trikonas in Horoscope</a></li>
+<li><a href="four-types-of-faiths-in-vedic-astrology.html">Four Types of Faiths in Vedic Astrology</a></li>
+<li><a href="eight-gatis-or-speeds.html">Eight Gatis or Speeds</a></li>
+<li><a href="main-strength-versus-shadbala.html">Main Strength versus Shadbala</a></li>
+<li><a href="divisional-charts.html">Divisional Charts</a></li>
+<li><a href="non-luminous-upagrahas-and-gulika-or-mandi-etc.html">Non Luminous Upagrahas and Gulika or Mandi etc</a></li>
+<li><a href="diabetes-or-madhumeha.html">Diabetes or Madhumeha</a></li>
+<li><a href="shashtyamsha-deities.html">Shashtyamsha Deities</a></li>
+<li><a href="varga-categories-and-vargottama.html">Varga-Categories and Vargottama</a></li>
+<li><a href="effects-of-a-planet-in-antardashaa-of-relative-or-sadharmi.html">Effects of A Planet In Antardashaa of Relative or Sadharmi</a></li>
+<li><a href="compatibility-or-melapaka.html">Compatibility or Melapaka</a></li>
+<li><a href="planetary-return-charts.html">Planetary RETURN Charts</a></li>
+<li><a href="rationale-behind-exaltations-of-planets.html">Rationale behind Exaltations of Planets</a></li>
+<li><a href="astrological-mathematics-of-menstrual-cycle.html">Astrological Mathematics of Menstrual Cycle</a></li>
+<li><a href="mean-versus-true-time-and-measure-of-day-or-ghati.html">Mean versus True Time and Measure of Day or Ghati</a></li>
+<li><a href="weekday-sequence-indian-view.html">Weekday Sequence - Indian View</a></li>
+<li><a href="bhaavas-from-all-bhaavas.html">Bhaavas from all Bhaavas</a></li>
+<li><a href="maangalika-dosha.html">Maangalika Dosha</a></li>
+<li><a href="bhrigu-bindu.html">Bhrigu Bindu</a></li>
+<li><a href="sarvato-bhadra-chakra.html">Sarvato-Bhadra Chakra</a></li>
+<li><a href="vaar.html">Vaar</a></li>
+</ul>
+</li>
+<li><a href="javascript:;">Natal</a>
+<ul>
+<li><a href="donald-trump.html">Donald Trump</a></li>
+<li><a href="rashtriya-svayamsevak-sangh.html">Rashtriya Svayamsevak Sangh</a></li>
+<li><a href="swami-ramakrishna-paramhamsa.html">Swami Ramakrishna Paramhamsa</a></li>
+<li><a href="indira-gandhi.html">Indira Gandhi</a></li>
+<li><a href="indira-gandhi-hindi.html">Indira Gandhi -HINDI</a></li>
+<li><a href="aap_aam-adami-party.html">AAm Adami Party</a></li>
+<li><a href="arvind-kejriwal.html">Arvind Kejriwal</a></li>
+<li><a href="congress-vs-bjp-2014.html">Congress vs BJP 2014</a></li>
+<li><a href="swearing-in-muhurta-of-new-indian-govt-in-2014.html">Swearing-In Muhurta Of New Indian Govt In 2014</a></li>
+<li><a href="narendra-modi.html">Narendra Modi</a></li>
+<li><a href="birth-chart-of-gopinath-munde.html">Birth Chart Of Gopinath Munde</a></li>
+<li><a href="lord-rama.html">Lord Rama</a></li>
+<li><a href="jayalalita.html">Jayalalita</a></li>
+<li><a href="prediction-of-death.html">Prediction Of Death</a></li>
+<li><a href="indo-pak-cricket-match-in-world-cup-14-feb-2015-adelaide.html">Indo-Pak Cricket Match in World Cup 14 Feb 2015 Adelaide</a></li>
+<li><a href="prophet-muhammad.html">Prophet Muhammad</a></li>
+<li><a href="david-cameron.html">David Cameron</a></li>
+<li><a href="nitish-kumar.html">Nitish Kumar</a></li>
+<li><a href="amir-khan.html">Amir Khan</a></li>
+<li><a href="ram-rahim.html">Ram Rahim</a></li>
+<li><a href="amitabh-bachchan-covid19.html">Amitabh Bachchan Covid19</a></li>
+<li><a href="yogi-adityanath.html">Yogi Adityanath</a></li>
+</ul>
+</li>
+<li><a href="javascript:;">Stocks</a>
+<ul>
+<li><a href="gold-price-forecasting.html">Gold Price Forecasting</a></li>
+<li><a href="silver-graph-1.html">Silver Graph-1</a></li>
+<li><a href="forex-1.html">Forex-1</a></li>
+<li><a href="iron-price-forecasting.html">Iron Price Forecasting</a></li>
+<li><a href="sensex-forecasting.html">Sensex Forecasting</a></li>
+<li><a href="sensex-vs-gold-comparison.html">Sensex vs Gold Comparison</a></li>
+</ul>
+</li>
+<li><a href="javascript:;">Medini</a>
+<ul>
+<li><a href="raaj-jyotisha.html">Raaj-Jyotisha</a></li>
+<li><a href="national-income.html">National Income</a></li>
+<li><a href="general-principles.html">General Principles</a></li>
+<li><a href="sapta-nadi-chakra.html">Sapta-Nadi Chakra</a></li>
+<li><a href="china-japan-war-1281-a-d.html">China-Japan War 1281 A.D.</a></li>
+<li><a href="annual-rains-in-india.html">Annual Rains in India</a></li>
+<li><a href="rain-forecast-for-2013-4.html">Rain Forecast for 2013-4</a></li>
+<li><a href="rain-charts-for-2014-5.html">Rain Charts for 2014-5</a></li>
+<li><a href="weather-forecasting-temperature-c.html">Weather Forecasting - Temperature &amp;c</a></li>
+<li><a href="invasion-of-india-battle-of-plassey.html">Invasion Of India--Battle of Plassey</a></li>
+<li><a href="invasion-of-india-alexander.html">Invasion Of India--Alexander</a></li>
+<li><a href="divya-varsha-phala-1579-1939-ad.html">Divya Varsha-phala--1579-1939 AD</a></li>
+<li><a href="divya-maasa-phala-1999-2029-ad.html">Divya Maasa-phala--1999-2029 AD</a></li>
+<li><a href="uttarakhand-cataclysm-mid-june-2013.html">Uttarakhand Cataclysm--mid June 2013</a></li>
+<li><a href="world-rains-data-analysis-of-1956-7.html">World Rains Data Analysis of 1956-7</a></li>
+<li><a href="eclipses.html">Eclipses</a></li>
+<li><a href="earthquake-of-nepal-25-apr-2015.html">Earthquake of Nepal 25 Apr 2015</a></li>
+<li><a href="terror-attack-on-uri-18-sep-2016.html">Terror Attack on Uri 18 Sep 2016</a></li>
+<li><a href="fani.html">Fani फणि चक्रवात</a></li>
+</ul>
+</li>
+<li><a href="javascript:;">Articles</a>
+<ul>
+<li><a href="creative-imagination.html">Creative Imagination</a></li>
+<li><a href="history-of-pi.html">History of Pi</a></li>
+<li><a href="links_pdf-files.html">PDF files</a></li>
+<li><a href="vedic-linguistics.html">Vedic Linguistics</a></li>
+<li><a href="modern-equations-on-ancient-principles.html">Modern Equations On Ancient Principles</a></li>
+<li><a href="origin-of-tropicalism-in-western-astrology.html">Origin of Tropicalism in Western Astrology</a></li>
+<li><a href="dreams-and-moksha.html">Dreams and Moksha</a></li>
+<li><a href="vedic-versus-western-astrology.html">Vedic versus Western Astrology</a></li>
+<li><a href="non-astrological-essays.html">Non-Astrological Essays</a></li>
+<li><a href="indology.html">INDOLOGY</a></li>
+<li><a href="ayurvedic-approach-to-know-your-nature.html">Ayurvedic Approach to Know Your Nature</a></li>
+<li><a href="healthy-eating.html">Healthy Eating</a></li>
+<li><a href="mockery-of-history_horoscope-of-lord-ram.html">horoscope-of-lord-ram</a></li>
+<li><a href="dr-lakshaman-jha-biography.html">Dr Lakshaman Jha Biography</a></li>
+<li><a href="links-to-books-on-hinduism.html">Links To Books On Hinduism</a></li>
+<li><a href="allopathy-vs-ayurveda.html">Allopathy vs Ayurveda</a></li>
+</ul>
+</li>
+<li><a href="javascript:;">Misc</a>
+<ul>
+<li><a href="kundalee-software-download.html">Kundalee Software Download</a></li>
+<li><a href="kundalee-compare-software-download.html">Kundalee-Compare Software Download</a></li>
+<li><a href="bhaavaant-software-download.html">Bhaavaant Software Download</a></li>
+<li><a href="our-forum.html">Our Forum</a></li>
+<li><a href="graha-shanti-propitiation-of-planets.html">Graha Shanti (Propitiation of Planets)</a></li>
+<li><a href="best-devanagari-font.html">Best Devanagari Font</a></li>
+<li><a href="mithilakshara-font.html">Mithilakshara Font</a></li>
+<li><a href="sort-program.html">Sort Program</a></li>
+<li><a href="maithil-brahmana.html">Maithil Brahmana</a></li>
+</ul>
+</li>
+<li><a href="javascript:;">AI</a>
+<ul>
+<li><a href="machine-learning-starter.html">Machine Learning Starter</a></li>
+<li><a href="gpu-neural-network-training.html">GPU Neural Network Training</a></li>
+<li><a href="neural-network-parameters-tuning.html">Neural Network Parameters Tuning</a></li>
+<li><a href="auto-m-l-model-search.html">Auto M L Model Search</a></li>
+<li><a href="lstm-neural-network.html">LSTM Neural Network</a></li>
+<li><a href="web-scraping.html">Web Scraping</a></li>
+</ul>
+</li>
+<li><a href="javascript:;">Contact</a>
+<ul>
+<li><a href="email-to-vj.html">Email to VJ</a></li>
+<li><a href="profile-of-vinay-jha.html">Profile of Vinay Jha</a></li>
+<li><a href="credentials.html">Credentials</a></li>
+<li><a href="sitemap-search.html">SiteMap &amp; Search</a></li>
+</ul>
+</li>
+</ul>
+
+                    </div>
+                
+                <div id="login-status"><a href="javascript:;" onclick="WIKIDOT.page.listeners.createAccount(event)" class="login-status-create-account btn">Create account</a> <span>or</span> <a href="javascript:;" onclick="WIKIDOT.page.listeners.loginClick(event)" class="login-status-sign-in btn btn-primary">Sign in</a> </div>
+                <div id="header-extra-div-1"><span></span></div><div id="header-extra-div-2"><span></span></div><div id="header-extra-div-3"><span></span></div>
+            </div>
+            
+            <div id="content-wrap">
+                
+                
+                <!-- google_ad_section_end -->
+                
+                <div id="main-content">
+                    <div id="action-area-top"></div>
+                    
+                    
+                        <div id="page-title">
+                            LSTM Neural Network
+                        </div>
+                    
+
+                    
+
+                    
+
+
+
+                    <div id="page-content">
+                        
+
+<table style="margin:0; padding:0">
+<tr>
+<td style="margin:0; padding:0">
+<div id="toc">
+<div id="toc-action-bar"><a href="javascript:;" onclick="WIKIDOT.page.listeners.foldToc(event)">Fold</a><a style="display: none" href="javascript:;" onclick="WIKIDOT.page.listeners.unfoldToc(event)">Unfold</a></div>
+<div class="title">Table of Contents</div>
+<div id="toc-list">
+<div style="margin-left: 1em;"><a href="#toc0">LSTM : परिचय</a></div>
+<div style="margin-left: 1em;"><a href="#toc1">LSTM के दुरुपयोग का उदाहरण</a></div>
+<div style="margin-left: 1em;"><a href="#toc2">LSTM का सही प्रयोग : स्टॉक मूल्य की भविष्यवाणी</a></div>
+<div style="margin-left: 2em;"><a href="#toc3">वित्तीय डैटासेट डाउनलोड करने का तरीका</a></div>
+<div style="margin-left: 2em;"><a href="#toc4">Jupyter Notebook में LSTM : सीपीयू या जीपीयू मोड</a></div>
+<div style="margin-left: 2em;"><a href="#toc5">अनाकोण्डा प्रॉम्प्ट पायथन में LSTM : सीपीयू या जीपीयू मोड</a></div>
+<div style="margin-left: 2em;"><a href="#toc6">अनाकोण्डा प्रॉम्प्ट में CuDNNLSTM : जीपीयू सुपरकम्प्यूटिंग (पैरेलल प्रोसेसिंग)</a></div>
+</div>
+</div>
+</td>
+</tr>
+</table>
+<h1 id="toc0"><span><span style="font-size:150%;"><span style="color:RGB(255,0,0)"><strong>LSTM : परिचय</strong></span></span></span></h1>
+<p>श्रृङ्खला या सिक्वेन्स में डैटा हो तो उसमें भावी डैटा की भविष्यवाणी करने में LSTM न्यूरल नेटवर्कों की अत्यधिक उपयोगिता पायी गयी है，जैसे कि कम्पनियों द्वारा बिक्री，स्टॉक बाजार के मूल्य，OCR，वॉइस रिकॉगनिशन，अनुवाद，फोन पर टाइप करते समय अगले सम्भावित शब्द का पूर्वानुमान，आदि । अनावश्यक डैटा को फॉर्गेट गेट द्वारा निकालकर आवश्यक डैटा की लम्बी श्रृङ्खला को याद रखने की क्षमता के कारण पैटर्नों की पहचान करने में LSTM की उपयोगिता ‘फीड फॉरवर्ड’ या ‘रिकरेण्ट’ न्यूरल नेटवर्कों से बेहतर है ।</p>
+<p>फीड फॉरवर्ड नेटवर्क में पिछले डैटा की सूचना नहीं रहती क्योंकि वेट अपडेट करने की विधि में पिछले अवयवों का प्रभाव धीरे−धीरे घटते हुए लुप्त हो जाता है जिसे Vanishing Gradient कहते हैं । RNN में कुछ दूरी तक पिछले अवयवों की स्मृति बचाने का प्रावधान किया गया किन्तु दीर्घ श्रृङ्खला में RNN स्मृतिहीन बन जाता है । RNN की सँयोजना में इसी कमी को देर करके LSTM की संकल्पना की गयी । LSTM में अनावश्यक सूचनाओं को फॉर्गेट द्वार से निकाल दिया जाता है ताकि आवश्यक सूचना के लिये पथ प्रशस्त हो；इस प्रकार दूर तक की श्रृङ्खला से सम्बन्ध बना रहता है ।</p>
+<h1 id="toc1"><span><span style="font-size:150%;"><span style="color:RGB(255,0,0)"><strong>LSTM के दुरुपयोग का उदाहरण</strong></span></span></span></h1>
+<p>मधुमेह रोगियों के जिस डैटाबेस पर MLP न्यूरल नेटवर्क की जो प्रोग्रामिंग दिखायी गयी थी उसमें एपोक १५००० करने पर भी एक्यूरेसी ८६% से अधिक नहीं जाती । परन्तु निम्न LSTM कोड रन करेंगे तो ४० एपोक से पहले ही एक्यूरेसी १००% हो जायगी । मशीन लर्निंग में एक्यूरेसी कभी भी १००% नहीं होनी चाहिये । इस त्रुटि का कारण यह है कि LSTM पिछले सैम्पलों में से ट्रेनिंग में उपयोगी आँकड़ों को याद रखता है और ट्रेनिंग में अनावश्यक आँकड़ों को भुला देता है । इसका नेटवर्क का नाम ही है लांग शॉर्ट टर्म मेमोरी । मधुमेह डैटाबेस पर LSTM का प्रयोग करने से पिछले रोगियों के आँकड़े आगे वाले रोगियों के आँकड़ों को प्रभावित करते हैं，जिस कारण सभी रोगियों के आँकड़े गलत हो जाते हैं और पिछले रोगी की नेटवर्क एक्यूरेसी अगले रोगी की एक्यूरेसी में जुड़ती चली जाती है जिस कारण शीघ्र ही एक्यूरेसी बहुत बढ़ जाती है । ऐसे डैटाबेस में LSTM का प्रयोग करना ही नहीं चाहिये जिसमें हर सैम्पल पूर्णतया स्वतन्त्र हो । उदाहरणार्थ，मधुमेह डैटाबेस में किसी रोगी के निम्न आँकड़े हैं —</p>
+<p>१⋅Number of times pregnant<br />
+२⋅Plasma glucose concentration a 2 hours in an oral glucose tolerance test<br />
+३⋅Diastolic blood pressure (mm Hg)<br />
+४⋅Triceps skin fold thickness (mm)<br />
+५⋅2-Hour serum insulin (mu U/ml)<br />
+६⋅Body mass index (weight in kg/(height in m)^2)<br />
+७⋅Diabetes pedigree function<br />
+८⋅Age (years)</p>
+<p>इनमें से ऐसा कोई आँकड़ा नहीं है जिसका सम्बन्ध किसी अन्य रोगी के किसी आँकड़े से कोई सम्बन्ध हो ।</p>
+<p>फिर भी यदि इसी किस्म के फॉर्मेट में कोई डैटाबेस हो जिसमें सैम्पलों का आगे−पीछे के अन्य सैम्पलों से सम्बन्ध हो तो LSTM प्रोग्रामिंग सीखने के लिये निम्न उदाहरण प्रस्तुत है，हालाँकि जिस मधुमेह डैटाबेस पर निम्न उदाहरण है उसका LSTM हेतु प्रयोग करना अनुचित है । LSTM का उचित प्रयोग अगले अनुच्छेद में है । निम्न कोड अनाकोण्डा प्रॉम्प्ट पर पायथन में चलायें ।<br />
+▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃<br />
+from tensorflow.keras.models import Sequential<br />
+from tensorflow.keras.layers import Dense, Dropout<br />
+from tensorflow.keras import optimizers<br />
+import tensorflow as tf<br />
+tf.compat.v1.get_default_graph<br />
+from tensorflow.keras.models import load_model<br />
+from tensorflow.keras.constraints import min_max_norm<br />
+import time<br />
+from tensorflow.keras.layers import Embedding<br />
+from tensorflow.keras.layers import LSTM<br />
+from numpy import loadtxt<br />
+max_features = 1024</p>
+<p>dataset = loadtxt('Z:\Z_GPU\PythonPrograms\pima-indians-diabetes.csv', delimiter=',')<br />
+X = dataset[:,0:8]<br />
+y = dataset[:,8]</p>
+<p>model = Sequential()<br />
+model.add(Embedding(max_features, output_dim=256))<br />
+model.add(LSTM(128))<br />
+model.add(Dropout(0.5))<br />
+model.add(Dense(1, activation='sigmoid'))</p>
+<p>model.compile(loss='binary_crossentropy', optimizer='rmsprop', metrics=['accuracy'])</p>
+<p>start = time.time()<br />
+model.fit(X, y, batch_size=10, epochs=10)<br />
+end = time.time()<br />
+score = model.evaluate(X, y, batch_size=10)<br />
+print(&quot;%s: %.2f%%&quot; % (model.metrics_names[1], score[1]*100))<br />
+print(end - start)<br />
+▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃</p>
+<h1 id="toc2"><span><span style="font-size:150%;"><span style="color:RGB(255,0,0)"><strong>LSTM का सही प्रयोग : स्टॉक मूल्य की भविष्यवाणी</strong></span></span></span></h1>
+<h2 id="toc3"><span><span style="font-size:150%;"><span style="color:RGB(0,0,255)"><strong>वित्तीय डैटासेट डाउनलोड करने का तरीका</strong></span></span></span></h2>
+<p>गूगल सर्च में यह टाइन करें —<br />
+qualdl reliance industries limited</p>
+<p>तब जो लिंक सबसे पहले मिलेगा वह है —<br />
+<a href="https://www.quandl.com/data/TC1/RELIANCE-Reliance-Industries-Ltd-Adjusted-Pricing">https://www.quandl.com/data/TC1/RELIANCE-Reliance-Industries-Ltd-Adjusted-Pricing</a></p>
+<p>उसमें “डाउनलोड” बटन क्लिक करके CSV फॉर्मेट चुनकर डैटासेट डाउनलोड कर लें । माइक्रोसॉफ्ट−एक्सेल या नोटपैड में मूल फाइल खोलकर उसमें से जिस कालखण्ड पर आप मशीन लर्निंग प्रोग्राम बनाना चाहते हैं केवल उतने अंश को नये नाम से सेव कर लें और उस सेव्ड फाइल का पथ और नाम निम्न प्रोग्राम में डाल दें । याहू फायनैन्स पर भी बहुत डैटा मिलेंगे किन्तु उसका फार्मेट अलग है जिसके लिये प्रोग्राम का डैटा इनपुट कोडिंग बदलना पड़ेगा ।</p>
+<p>उस डैटासेट में कुल कितने डैटा−सैम्पल हैं और प्रोग्राम में उस हिसाब से ट्रेनिंग और टेस्ट डैटासेटों की संख्या कैसे निर्धारित करें इसके लिये निम्न प्रोग्राम की जाँच सावधानीपूर्वक करें ।</p>
+<p>अनाकोण्डा−प्रॉम्प्ट में यह प्रोग्राम एक−एक पङ्क्ति लिखकर एण्टर दबाते हुए धीरे−धीरे आगे बढ़ेंगे तो प्रोग्राम की बारीकियाँ समझ में आयेंगी，और जहाँ कठिनाई हो उस शब्द का अर्थ गूगल−सर्च द्वारा ढूँढें ।</p>
+<h2 id="toc4"><span><span style="font-size:150%;"><span style="color:RGB(0,0,255)"><strong>Jupyter Notebook में LSTM : सीपीयू या जीपीयू मोड</strong></span></span></span></h2>
+<p><a href="https://www.quandl.com/data/BSE/BOM500325-RELIANCE-INDUSTRIES-LTD-EOD-Prices">https://www.quandl.com/data/BSE/BOM500325-RELIANCE-INDUSTRIES-LTD-EOD-Prices</a> वेबसाइट से “रिलायन्स इण्डस्ट्रीज लिमिटेड” का डैटाबेस डाउनलोड करके उसे माइक्रोसॉफ्ट Excel में खोलें और फिर उसमें से अन्तिम १३०० दिनों के आँकड़ों को RIL2.csv नाम के फाइल में सेव कर लें । मैंने जो सेव किया उसका अन्तिम दिन है ३१ अक्टूबर २०१९ ईस्वी । याहू फाइनैन्स से भी ऐसे आँकड़े डाउनलोड किये जा सकते हैं किन्तु उनकी फॉर्मेट भिन्न होती है जो निम्न प्रोग्राम में कार्य नहीं करेगा，डैटाफ्रेम बदलना पड़ेगा ।</p>
+<p><a href="https://www.quandl.com/">https://www.quandl.com</a> वेबसाइट से संसार की सभी बड़ी कम्पनियों के आँकड़े डाउनलोड कर सकते हैं और रिलायन्स के बदले किसी अन्य कम्पनी के आँकड़े डालकर निम्न प्रोग्राम बना सकते हैं । किन्तु डैटाबेस के rows की संख्या प्रोग्राम के डैटाफ्रेम के अनुरूप रहना चाहिये，Date कॉलम का होना आवश्यक है और उसका फॉर्मेट निम्न प्रोग्राम में दर्ज होना चाहिये — '%d-%m-%Y' जो किसी किसी मामले में '%Y-%m-d%' होता है；तथा डैटाबेस में Close नाम का कॉलम होना चाहिये जो ट्रेडिंग बन्द होने के समय का स्टॉक मूल्य है ।</p>
+<p>ग्राफ प्लॉट करने के कारण Jupyter Notebook का प्रयोग किया गया है ।</p>
+<p>अब Jupyter Notebook खोलकर ऊपर दाहिनी ओर “न्यू” बटन दबाकर नया खाली फाइल खोलें और उसमें निम्न कोड पेस्ट कर दें । RIL2.csv का जो पथ निम्न फाइल में है उसे बदलकर अपने कम्प्यूटर में RIL2.csv फाइल का सही पथ टाइप कर दें । पूरे कोड में और कुछ न बदलें और प्रोग्राम को रन करें，नीचे जो स्क्रीनशॉट संलग्न है वैसा ही ग्राफ कुछ काल में मिलेगा जिसका अधिकांश ग्यारह सौ दिनों का डैटा नारङ्गी रङ्ग का ग्राफ है जबकि दाहिनी ओर का हिस्सा भविष्यवाणी है । भविष्यवाणी वाला ग्राफ लाल है，उससे सटा हरे रङ्ग का ग्राफ वास्तविक डैटा है किन्तु उसका प्रयोग मॉडल की ट्रेनिंग के लिये नहीं किया गया है ताकि वास्तविक डैटा का प्रभाव भविष्यवाणी पर न पड़े ।</p>
+<p>Jupyter Notebook में इस प्रोग्राम ने कभी ७६ तो कभी ७७ सेकण्ड समय लिया，किन्तु जीपीयू−मोड वाले Jupyter Notebook में पाँच गुणा कम समय लगा । बड़े प्रोग्रामों में तो इससे भी बहुत अधिक समय की बचत होती है ।</p>
+<p>जुपिटर नोटबुक हो या अनाकोण्डा या पाइचार्म，इन दो पङ्क्तियों के आरम्भ में चार स्पेस (▭▭▭▭)होना चाहिये वरना प्रोग्राम कार्य नहीं करेगा क्योंकि ये एक लूप के अङ्ग हैं —</p>
+<p>▭▭▭▭new_data['Date'][i] = data['Date'][i]<br />
+▭▭▭▭new_data['Close'][i] = data['Close'][i]</p>
+<p>लूप की इन दो पङ्क्तियों के बाद एक रिक्त पङ्क्ति होनी चाहिये वरना बाद वाली पङ्क्ति भी लूप का अङ्ग बन जायगी । यह सावधानी सभी लूपों के साथ बरतनी चाहिये । लूप की पहचान यह है कि उसका आरम्भ for से है ।</p>
+<p>nm = 1100 तथा nm2 = 100 को ऊपर से हटाकर नीचे ला सकते हैं किन्तु निम्न पङ्क्ति से पहले ही उनको रखना पड़ेगा —</p>
+<p>train = dataset[0:nm,:]</p>
+<p>इन दो पङ्क्तियों के आरम्भ में भी चार स्पेस होना चाहिये और बाद में एक रिक्त पङ्क्ति जोड़ दें —</p>
+<p>▭▭▭▭x_train.append(scaled_data[i-nm2:i,0])<br />
+▭▭▭▭y_train.append(scaled_data[i,0])</p>
+<p>model.add(LSTM(units=50, return_sequences=True, input_shape=(x_train.shape[1],1))) पङ्क्ति को ऐसे भी लिख सकते हैं —</p>
+<p>model.add(LSTM(units=50,<br />
+▭▭▭▭▭▭▭▭▭▭▭▭return_sequences=True,<br />
+▭▭▭▭▭▭▭▭▭▭▭▭input_shape=(x_train.shape[1],1)))</p>
+<p>किन्तु पहली पङ्क्ति के पश्चात जितने भी पैरामीटर हैं उनकी पङ्क्ति से पहले लगभग पन्द्रह स्पेस डाल दें और अन्तिम पङ्क्ति के पश्चात एक पङ्क्ति रिक्त हो । model.compile तथा model.fit के साथ भी ऐसा कर सकते हैं，तब हरेक पैरामीटर स्पष्ट दिखेगा ।</p>
+<p>model.compile में optimizer='adam' के स्थान पर optimizer=adm लिखेंगे और इस पङ्क्ति से पहले निम्न पङ्क्ति लिखेंगे तो ऑप्टीमाइजर के लक्षणों को बदल−बदल कर प्रयोग करने की छूट मिलेगी —</p>
+<p>adm = optimizers.Adam(lr=0.001, decay=1e-7, beta_1=0.9, beta_2=0.999, epsilon=1e-8, amsgrad=0)</p>
+<p>किन्तु ऑप्टीमाइजर के साथ ऐसा तभी कर सकेंगे जब प्रोग्राम के आरम्भिक इम्पोर्ट विभाग में यह पङ्क्ति हो —</p>
+<p>from tensorflow.keras import optimizers</p>
+<p>model.fit( को history = model.fit( भी लिख सकते हैं ।</p>
+<p>X_test.append(inputs[i-nm2:i,0]) पङ्क्ति भी लूप का अङ्ग है，अतः इस पङ्क्ति के आरम्भ में चार स्पेस जोड़ दें और अन्तिम पङ्क्ति के पश्चात एक पङ्क्ति रिक्त हो ।</p>
+<p>प्रोग्राम के परिणाम की औसत त्रुटि का रूट मीन स्क्वायर है rms ॥</p>
+<p>tm का अर्थ है model.fit( अर्थात् ट्रेनिंग में कितने सेकण्ड लगे ।</p>
+<p>उपरोक्त सारे परिवर्तन जुपिटर−नोटबुक ही नहीं बल्कि पायचार्म और अनाकोण्डा−प्रॉम्प्ट आदि समस्त पायथन इण्टरफेसों के लिये हैं ।<br />
+▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃<br />
+#import packages<br />
+import pandas as pd<br />
+import numpy as np<br />
+#importing required libraries<br />
+from sklearn.preprocessing import MinMaxScaler<br />
+from tensorflow.keras.models import Sequential<br />
+from tensorflow.keras.layers import Dense, Dropout, LSTM<br />
+import tensorflow as tf<br />
+tf.compat.v1.get_default_graph<br />
+import time</p>
+<p>#to plot within notebook<br />
+import matplotlib.pyplot as plt<br />
+%matplotlib inline</p>
+<p>#setting figure size<br />
+from matplotlib.pylab import rcParams<br />
+rcParams['figure.figsize'] = 20,8</p>
+<p>#for normalizing data<br />
+from sklearn.preprocessing import MinMaxScaler<br />
+scaler = MinMaxScaler(feature_range=(0, 1))</p>
+<p>#read the file<br />
+df = pd.read_csv(&quot;Z:\Z_GPU\_EquityDatasets\RIL2.csv&quot;)</p>
+<p>#print the head<br />
+df.head()</p>
+<p>nm = 1100<br />
+nm2 = 100</p>
+<p>#setting index as date<br />
+df['Date'] = pd.to_datetime(df.Date,format='%d-%m-%Y')<br />
+df.index = df['Date']</p>
+<p>#plot<br />
+plt.figure(figsize=(16,6))<br />
+plt.plot(df['Close'], label='Close Price history')</p>
+<p>#creating dataframe<br />
+data = df.sort_index(ascending=True, axis=0)<br />
+new_data = pd.DataFrame(index=range(0,len(df)),columns=['Date', 'Close'])<br />
+for i in range(0,len(data)):<br />
+▭▭▭▭new_data['Date'][i] = data['Date'][i]<br />
+▭▭▭▭new_data['Close'][i] = data['Close'][i]</p>
+<p>#setting index<br />
+new_data.index = new_data.Date<br />
+new_data.drop('Date', axis=1, inplace=True)</p>
+<p>#creating train and test sets<br />
+dataset = new_data.values</p>
+<p>train = dataset[0:nm,:]<br />
+valid = dataset[nm:,:]</p>
+<p>#converting dataset into x_train and y_train<br />
+scaler = MinMaxScaler(feature_range=(0, 1))<br />
+scaled_data = scaler.fit_transform(dataset)</p>
+<p>x_train, y_train = [], []<br />
+for i in range(nm2,len(train)):<br />
+▭▭▭▭x_train.append(scaled_data[i-nm2:i,0])<br />
+▭▭▭▭y_train.append(scaled_data[i,0])</p>
+<p>x_train, y_train = np.array(x_train), np.array(y_train)<br />
+x_train = np.reshape(x_train, (x_train.shape[0],x_train.shape[1],1))</p>
+<p>## create and fit the LSTM network<br />
+model = Sequential()<br />
+model.add(LSTM(units=50, return_sequences=True, input_shape=(x_train.shape[1],1)))<br />
+model.add(LSTM(units=50))<br />
+model.add(Dense(1))</p>
+<p>model.compile(loss='mean_squared_error', optimizer='adam')</p>
+<p>start = time.time()<br />
+model.fit(x_train, y_train, epochs=1, batch_size=1, verbose=2)<br />
+end = time.time()</p>
+<p>#predicting new values, using past 100 from the train data<br />
+inputs = new_data[len(new_data) - len(valid) - nm2:].values<br />
+inputs = inputs.reshape(-1,1)<br />
+inputs = scaler.transform(inputs)</p>
+<p>X_test = []<br />
+for i in range(nm2,inputs.shape[0]):<br />
+▭▭▭▭X_test.append(inputs[i-nm2:i,0])</p>
+<p>X_test = np.array(X_test)</p>
+<p>X_test = np.reshape(X_test, (X_test.shape[0],X_test.shape[1],1))<br />
+closing_price = model.predict(X_test)<br />
+closing_price = scaler.inverse_transform(closing_price)</p>
+<p>rms=np.sqrt(np.mean(np.power((valid-closing_price),2)))</p>
+<p>#for plotting<br />
+train = new_data[:nm]<br />
+valid = new_data[nm:]<br />
+valid['Predictions'] = closing_price<br />
+plt.plot(train['Close'])<br />
+plt.plot(valid[['Close','Predictions']])</p>
+<p>tm=(end - start)<br />
+tm<br />
+rms<br />
+▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃<br />
+उपरोक्त कोड को कॉपी करके जुपिटर−नोटबुक में पेस्ट करके रन कर सकते हैं । पहले तो देखकी आश्चर्य होगा कि ग्राफ की भविष्यवाणी लगभग सही है । किन्तु कोड के अन्त में एक नयी पङ्क्ति में लिखकर पूरे कोड को रन करेंगे तो मूल डैटा और प्रेडिक्शन में बहुत अन्तर पायेंगे，और वह अन्तर किसी क्रम में नहीं बल्कि ऊटपटाँग होगा । विभिन्न प्रयोग करने के लिये मैंने दो स्थिराङ्क दिये हैं जिनके मान बदलकर ट्रेण्डडैटा तथा वैलिडेशन एवं प्रेडिक्शन डैटा की संख्यायें बदल सकते हैं जिससे ग्राफ का स्वरूप बदल जायगा —</p>
+<p>nm = 1100<br />
+nm2 = 100</p>
+<p>उपरोक्त मान रखने पर ट्रेण्डडैटा की संख्या १००० होगी और १०० डैटा के आधार पर आगामी भविष्यवाणी होगी । nm की संख्या मूल डैटाबेस में डैटा की संख्या से कम होनी चाहिये，दोनों में जितना अन्तर होगा उतने दिनों की भविष्यवाणी होगी । यह प्रोग्राम केवल LSTM की प्रोग्रामिंग सीखने के लिये है，मशीन लर्निंग द्वारा स्टॉक बाजार में व्यापार करने की भूल न करें，पछतायेंगे । LSTM द्वारा केवल श्रृङ्खला की पिछली कड़ियों के आधार पर आगामी चरणों का पूर्वानुमान किया जाता है，जबकि स्टॉक मूल्यों पर पिछले दिनों के मूल्यों का प्रभाव तो पड़ता है जिस कारण उपरोक्त ग्राफ बना，किन्तु स्टॉक मूल्यों पर अन्य कई कारकों का भी प्रभाव पड़ता है जिनका उपरोक्त प्रोग्राम में समावेश नहीं किया गया है । दोनों संख्याओं को बदलकर प्रयोग कर सकते हैं । LSTM नोडों की संख्या ५० से कम या अधिक कर सकते हैं । पैरामीटरों को बदलकर विभिन्न प्रयोग कर सकते हैं ।</p>
+<p>LSTM का सही क्षेत्र में सही तरीके से प्रयोग किया जाय तो यह मशीन लर्निंग का सर्वोत्तम साधन है，जिसमें एकाध अन्य नेटवर्कों को मिलाकर कृत्रिम बुद्धि के सर्वश्रेष्ठ प्रोग्राम और यन्त्र बनते हैं । गूगल द्वारा विकसित टेस्सरैक्ट OCR भी LSTM द्वारा ही बना है ।</p>
+<img src="../vedicastrology.wdfiles.com/local--files/lstm-neural-network/RIL.jpg" alt="RIL.jpg" class="image" />
+<h2 id="toc5"><span><span style="font-size:150%;"><span style="color:RGB(0,0,255)"><strong>अनाकोण्डा प्रॉम्प्ट पायथन में LSTM : सीपीयू या जीपीयू मोड</strong></span></span></span></h2>
+<p>जुपिटर−नोटबुक，पाइचार्म，विजुअल स्टुडियो，आदि में पायथन भाषा में मशीन लर्निंग प्रोग्रामिंग सम्भव है और इन इण्टरफेसों के अपने−अपने लाभ हैं，किन्तु अनाकोण्डा−प्रॉम्प्ट के दो लाभ हैं जिनमें इसका कोई विकल्प नहीं — इसमें आप प्रोग्रामिंग की बारीकियाँ देख सकते हैं，और अपने कम्प्यूटर की अधिकतम सम्भव क्षमता का पूरा उपयोग कर सकते हैं । अन्य इण्टरफेसों में प्रोग्राम धीमा पड़ जाता है ।</p>
+<p>जुपिटर−नोटबुक में उपरोक्त प्रोग्राम को अनाकोण्डा−प्राम्प्ट में चलाने के लिये कुछ परिवर्तन करने पडेंगे ।</p>
+<p>जुपिटर नोटबुक वाले उपरोक्त प्रोग्राम में इस पङ्क्ति को हटा दें —</p>
+<p>%matplotlib inline</p>
+<p>और वहीं ये दो पङ्क्तियाँ जोड़ दें —</p>
+<p>from pandas.plotting import register_matplotlib_converters<br />
+register_matplotlib_converters()</p>
+<p>प्रोग्राम के अन्त में tm के पश्चात निम्न पृथक पङ्क्ति जोड़ दें ताकि अनाकोण्डा−प्रॉम्प्ट का ग्राफ−प्लॉट चित्र खुले，जो जुपिटर नोटबुक से बेहतर है —<br />
+plt.show()</p>
+<p>इतने परिवर्तनों के उपरान्त अनाकोण्डा−प्रॉम्प्ट वाला उपरोक्त LSTM प्रोग्राम बन जायगा ।</p>
+<p>इस प्रोग्राम को सीपीयू−मोड में चला सकते हैं और यदि आपके कम्प्यूटर में डेडिकेटेड जीपीयू है तो उसके लिये जीपीयू−मोड वाला एनवॉयरनमेण्ट बनाकर इस प्रोग्राम को चला सकते हैं जिससे लाभ यह होगा कि सामान्य रैम पर भार नहीं पड़ेगा और जीपीयू का उपयोग होगा，किन्तु जीपीयू का उपयोग सीपीयू की भाँति ही सामान्य गति से होगा，जीपीयू के पैरेलल कोरों का लाभ तभी उठा सकेंगे जब अगले अनुच्छेद के अनुसार प्रोग्राम चलायेंगे । किन्तु जीपीयू−मोड वाला एनवॉयरनमेण्ट में ही यह सम्भन है जो पहले ही लिखा जा चुका है ।</p>
+<h2 id="toc6"><span><span style="font-size:150%;"><span style="color:RGB(0,0,255)"><strong>अनाकोण्डा प्रॉम्प्ट में CuDNNLSTM : जीपीयू सुपरकम्प्यूटिंग (पैरेलल प्रोसेसिंग)</strong></span></span></span></h2>
+
+                    </div>
+
+                    
+
+
+                    
+
+
+
+                    
+
+                    <div id="page-info-break"></div>
+                    
+                        <div id="page-options-container">
+                            <div id="page-info">page revision: 39, last edited: <span class="odate time_1598076140 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%20%28%25O%20ago%29">22 Aug 2020 06:02</span></div>
+            <div id="page-options-bottom"  class="page-options-bottom">
+            <a href="javascript:;" class="btn btn-default" id="edit-button">Edit</a>
+<a href="javascript:;" class="btn btn-default" id="tags-button">Tags</a>
+
+<a href="javascript:;" class="btn btn-default" id="history-button">History</a>
+<a href="javascript:;" class="btn btn-default" id="files-button">Files</a>
+<a href="javascript:;" class="btn btn-default" id="print-button">Print</a>
+<a href="javascript:;" class="btn btn-default" id="site-tools-button">Site tools</a>
+<a href="javascript:;" class="btn btn-default" id="more-options-button">+&nbsp;Options</a> 
+</div>
+<div id="page-options-bottom-2" class="page-options-bottom form-actions" style="display:none">
+    <a href="javascript:;" class="btn btn-default" id="edit-sections-button">Edit Sections</a>
+    <a href="javascript:;" class="btn btn-default" id="edit-append-button">Append</a>
+    <a href="javascript:;" class="btn btn-default" id="edit-meta-button">Edit Meta</a>
+    <a href="javascript:;" class="btn btn-default" id="watchers-button">Watchers</a> 
+    <a href="javascript:;" class="btn btn-default" id="backlinks-button">Backlinks</a> 
+    <a href="javascript:;" class="btn btn-default" id="view-source-button">Page Source</a> 
+    <a href="javascript:;" class="btn btn-default" id="parent-page-button">Parent</a> 
+    <a href="javascript:;" class="btn btn-default" id="page-block-button">Lock Page</a>    
+    <a href="javascript:;" class="btn btn-default" id="rename-move-button">Rename</a> 
+    <a href="javascript:;" class="btn btn-default" id="delete-button">Delete</a> 
+</div>
+<div id="page-options-area-bottom">
+</div>
+
+                        </div>
+                    
+                    <div id="action-area" style="display: none;"></div>
+                </div>
+            </div>
+            
+            
+            
+            <div id="footer" style="display: block; visibility: visible;">
+                <div class="options" style="display: block; visibility: visible;">
+    <a href="http://www.wikidot.com/doc" id="wikidot-help-button">Help</a>
+    &nbsp;|
+    <a href="http://www.wikidot.com/legal:terms-of-service" id="wikidot-tos-button">Terms of Service</a>
+    &nbsp;|
+    <a href="http://www.wikidot.com/legal:privacy-policy" id="wikidot-privacy-button">Privacy</a>
+    &nbsp;|
+    <a href="javascript:;" id="bug-report-button" onclick="WIKIDOT.page.listeners.pageBugReport(event)">Report a bug</a>
+    &nbsp;|
+    <a href="javascript:;" id="abuse-report-button" onclick="WIKIDOT.page.listeners.flagPageObjectionable(event)">Flag as objectionable</a>
+</div>
+Powered by <a href="http://www.wikidot.com/">Wikidot.com</a> 
+            </div>
+            
+                <div id="license-area" class="license-area">
+                    Unless otherwise stated, the content of this page is licensed under<!--Creative Commons License--> <a rel="license" href="http://creativecommons.org/licenses/by-nc/2.5/">Creative Commons Attribution-Noncommercial 2.5  License</a>.<!--/Creative Commons License--><!-- <rdf:RDF xmlns="http://web.resource.org/cc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+	<Work rdf:about="">
+		<license rdf:resource="http://creativecommons.org/licenses/by-nc/2.5/" />
+	</Work>
+	<License rdf:about="http://creativecommons.org/licenses/by-nc/2.5/"><permits rdf:resource="http://web.resource.org/cc/Reproduction"/><permits rdf:resource="http://web.resource.org/cc/Distribution"/><requires rdf:resource="http://web.resource.org/cc/Notice"/><requires rdf:resource="http://web.resource.org/cc/Attribution"/><prohibits rdf:resource="http://web.resource.org/cc/CommercialUse"/><permits rdf:resource="http://web.resource.org/cc/DerivativeWorks"/></License></rdf:RDF> -->
+
+                </div>
+            
+            
+            
+
+
+
+            <div id="extrac-div-1"><span></span></div><div id="extrac-div-2"><span></span></div><div id="extrac-div-3"><span></span></div>
+            
+            
+            
+            
+                
+            
+        </div>
+        
+    </div>
+<!-- These extra divs/spans may be used as catch-alls to add extra imagery. -->
+<div id="extra-div-1"><span></span></div><div id="extra-div-2"><span></span></div><div id="extra-div-3"><span></span></div>
+<div id="extra-div-4"><span></span></div><div id="extra-div-5"><span></span></div><div id="extra-div-6"><span></span></div>
+</div>
+
+
+
+
+</div>
+<div id="dummy-ondomready-block" style="display: none;" ></div>
+    <!-- Google Analytics load -->
+    <script type="text/javascript">
+        (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+
+    <!-- Quantcast -->
+    <script type="text/javascript">
+    _qoptions={
+        qacct:"p-edL3gsnUjJzw-"
+    };
+    (function() {
+        var qc = document.createElement('script'); qc.type = 'text/javascript'; qc.async = true;
+        qc.src = ('https:' == document.location.protocol ? 'https://secure' : 'http://edge') + '.quantserve.com/quant.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(qc, s);
+    })();
+    </script>
+    <noscript>
+        <img src="../pixel.quantserve.com/pixel/p-edL3gsnUjJzw-.gif" style="display: none;" border="0" height="1" width="1" alt="Quantcast"/>
+    </noscript>
+
+
+
+
+<div id="page-options-bottom-tips" style="display: none;">
+    <div id="edit-button-hovertip">
+        Click here to edit contents of this page.    </div>
+</div>
+<div id="page-options-bottom-2-tips"  style="display: none;">
+    <div id="edit-sections-button-hovertip">
+        Click here to toggle editing of individual sections of the page (if possible).         Watch headings for an &quot;edit&quot; link when available.    </div>
+    <div id="edit-append-button-hovertip">
+        Append content without editing the whole page source.    </div>
+    <div id="history-button-hovertip">
+        Check out how this page has evolved in the past.    </div>
+    <div id="discuss-button-hovertip">
+        If you want to discuss contents of this page - this is the easiest way to do it.    </div>
+    <div id="files-button-hovertip">
+        View and manage file attachments for this page.    </div>
+    <div id="site-tools-button-hovertip">
+        A few useful tools to manage this Site.    </div>
+    <div id="backlinks-button-hovertip">
+        See pages that link to and include this page.    </div>
+    <div id="rename-move-button-hovertip">
+        Change the name (also URL address, possibly the category) of the page.    </div>
+    <div id="view-source-button-hovertip">
+        View wiki source for this page without editing.    </div>
+    <div id="parent-page-button-hovertip">  
+        View/set parent page (used for creating breadcrumbs and structured layout).    </div>
+            <div id="abuse-report-button-hovertip">
+            Notify administrators if there is objectionable content in this page.        </div>
+        <div id="bug-report-button-hovertip">
+            Something does not work as expected? Find out what you can do.        </div>
+        <div id="wikidot-help-button-hovertip">
+            General Wikidot.com documentation and help section.        </div>
+        <div id="wikidot-tos-button-hovertip">
+            Wikidot.com Terms of Service - what you can, what you should not etc.        </div>
+        <div id="wikidot-privacy-button-hovertip">
+            Wikidot.com Privacy Policy.          
+        </div>
+    </div>
+</body>
+
+<!-- Mirrored from vedicastrology.wikidot.com/lstm-neural-network by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 27 May 2022 16:49:45 GMT -->
+</html>

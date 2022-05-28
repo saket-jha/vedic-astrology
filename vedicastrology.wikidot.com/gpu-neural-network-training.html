@@ -1,0 +1,617 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+
+<!-- Mirrored from vedicastrology.wikidot.com/gpu-neural-network-training by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 27 May 2022 16:49:22 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+    <title>GPU Neural Network Training - Vedic Astrology</title>
+    
+    
+    
+    <script type="text/javascript" src="../d3g0gp89917ko0.cloudfront.net/v--291054f06006/common--javascript/init.combined.js"></script>
+    <script  type="text/javascript">
+        var URL_HOST = 'www.wikidot.com';
+        var URL_DOMAIN = 'wikidot.com';
+        var USE_SSL =  true ;
+        var URL_STATIC = 'http://d3g0gp89917ko0.cloudfront.net/v--291054f06006';
+        // global request information
+        
+        var WIKIREQUEST = {};
+        WIKIREQUEST.info = {};
+        
+        WIKIREQUEST.info.domain = "vedicastrology.wikidot.com";
+        WIKIREQUEST.info.siteId = 92260;
+        WIKIREQUEST.info.siteUnixName = "vedicastrology";
+        WIKIREQUEST.info.categoryId = 508976;
+        WIKIREQUEST.info.themeId = 82723;
+        WIKIREQUEST.info.requestPageName = "gpu-neural-network-training";
+        OZONE.request.timestamp = 1653669549;
+        OZONE.request.date = new Date();
+        WIKIREQUEST.info.lang = 'en';
+                WIKIREQUEST.info.pageUnixName = "gpu-neural-network-training";
+        WIKIREQUEST.info.pageId = 919174390;
+                        WIKIREQUEST.info.lang = "en";
+        OZONE.lang = "en";
+        var isUAMobile = !!/Android|webOS|iPhone|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    </script>
+    
+    
+
+
+    
+        <script  type="text/javascript">
+    
+        require.config({
+            baseUrl: URL_STATIC + '/common--javascript',
+            paths: {
+                'jquery.ui': 'jquery-ui.min',
+                'jquery.form': 'jquery.form'
+            }
+        });
+    
+    </script>
+    
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8"/>
+            
+    
+    
+    
+    
+    <meta http-equiv="content-language" content="en"/>
+    <script type="text/javascript" src="../d3g0gp89917ko0.cloudfront.net/v--291054f06006/common--javascript/WIKIDOT.combined.js"></script>
+        
+    
+    <style type="text/css" id="internal-style">
+        
+        /* modules */
+        
+                
+        /* theme */
+                    @import url(../d3g0gp89917ko0.cloudfront.net/v--291054f06006/common--theme/base/css/style.css);
+                    @import url(../vedicastrology.wdfiles.com/local--theme/simple/style.css);
+            </style>
+    
+        
+        
+        
+    <link rel="shortcut icon" href="local--favicon/favicon.gif"/>
+    <link rel="icon" type="image/gif" href="local--favicon/favicon.gif"/>
+    
+            <link rel="apple-touch-icon" href="common--images/apple-touch-icon-57x57.png" />
+        <link rel="apple-touch-icon" sizes="72x72" href="common--images/apple-touch-icon-72x72.png" />
+        <link rel="apple-touch-icon" sizes="114x114" href="common--images/apple-touch-icon-114x114.png" />
+        
+        
+            <link rel="alternate" type="application/wiki" title="Edit this page" href="javascript:WIKIDOT.page.listeners.editClick()"/>
+    
+        <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-18234656-1']);
+        _gaq.push(['_setDomainName', 'none']);
+        _gaq.push(['_setAllowLinker', true]);
+        _gaq.push(['_trackPageview']);
+
+        _gaq.push(['old._setAccount', 'UA-68540-5']);
+        _gaq.push(['old._setDomainName', 'none']);
+        _gaq.push(['old._setAllowLinker', true]);
+        _gaq.push(['old._trackPageview']);
+
+            </script>
+    
+    <script type="text/javascript">
+        window.google_analytics_uacct = 'UA-18234656-1';
+        window.google_analytics_domain_name = 'none';
+    </script>
+    
+        <link rel="manifest" href="onesignal/manifest.html" />
+    <script src="../cdn.onesignal.com/sdks/OneSignalSDK.js" acync=""></script>
+    <script>
+        var OneSignal = window.OneSignal || [];
+        OneSignal.push(function() {
+          OneSignal.init({
+            appId: null,
+          });
+        });
+    </script>
+        
+</head>
+<body id="html-body">
+<div id="skrollr-body">
+<a name="page-top"></a>
+
+
+
+
+
+<div id="container-wrap-wrap">
+    <div id="container-wrap">
+        <div id="container">
+            <div id="header">
+              <h1><a href="index.html"><span>Vedic Astrology</span></a></h1>
+                
+                    <h2><span>Vedic Jyotisha Unravelled !</span></h2>
+                
+                
+                <!-- google_ad_section_start(weight=ignore) -->
+                
+                <div id="search-top-box" class="form-search">
+    <form id="search-top-box-form" action="http://vedicastrology.wikidot.com/dummy" class="input-append">
+        <input id="search-top-box-input" class="text empty search-query" type="text" size="15" name="query" value="Search this site" onfocus="if(YAHOO.util.Dom.hasClass(this, 'empty')){YAHOO.util.Dom.removeClass(this,'empty'); this.value='';}"/><input class="button btn" type="submit" name="search" value="Search"/>
+    </form>
+</div>
+                
+                
+                    <div id="top-bar">
+                        
+
+<ul>
+<li><a href="javascript:;">Tutorial</a>
+<ul>
+<li><a href="start.html">Start</a></li>
+<li><a href="overview.html">Overview</a></li>
+<li><a href="hindu-calendar.html">Hindu Calendar</a></li>
+<li><a href="planetary-traits-1.html">Planetary Traits-1</a></li>
+<li><a href="origin-and-meaning-of-horoscopic-houses.html">Origin and Meaning of Horoscopic Houses</a></li>
+<li><a href="own-sign-exaltation-and-moola-trikona-of-nodes.html">Own Sign, Exaltation and Moola Trikona of Nodes</a></li>
+<li><a href="friendships.html">Friendships</a></li>
+<li><a href="how-to-make-correct-predictions.html">How To Make Correct Predictions</a></li>
+<li><a href="ayanamsha-vs-precession.html">Ayanamsha vs Precession</a></li>
+<li><a href="bhaavachalita.html">Bhaavachalita</a></li>
+<li><a href="udaya-asta-or-heliacal-risings-and-settings.html">Udaya-Asta or Heliacal Risings and Settings</a></li>
+<li><a href="origin-of-150-naadis.html">Origin of 150 Naadis</a></li>
+<li><a href="vimshottari-year-length.html">Vimshottari Year Length</a></li>
+<li><a href="dashaa-level-nomenclature.html">Dashaa-Level Nomenclature</a></li>
+<li><a href="sudarshana-chakra.html">Sudarshana Chakra</a></li>
+<li><a href="arudha-pada-and-other-padas.html">Arudha-pada and Other Padas</a></li>
+<li><a href="ashtaka-varga.html">Ashtaka Varga</a></li>
+<li><a href="vipareet-raja-yoga.html">Vipareet Raja Yoga</a></li>
+<li><a href="karakamsha.html">Karakamsha</a></li>
+<li><a href="planetary-war.html">Planetary War</a></li>
+<li><a href="md-and-ad-results-laghu-parashari.html">MD and AD results - Laghu Parashari</a></li>
+<li><a href="strength-of-a-house.html">Strength of a House</a></li>
+<li><a href="four-purusharthas-as-four-trikonas-in-horoscope.html">Four Purusharthas as Four Trikonas in Horoscope</a></li>
+<li><a href="four-types-of-faiths-in-vedic-astrology.html">Four Types of Faiths in Vedic Astrology</a></li>
+<li><a href="eight-gatis-or-speeds.html">Eight Gatis or Speeds</a></li>
+<li><a href="main-strength-versus-shadbala.html">Main Strength versus Shadbala</a></li>
+<li><a href="divisional-charts.html">Divisional Charts</a></li>
+<li><a href="non-luminous-upagrahas-and-gulika-or-mandi-etc.html">Non Luminous Upagrahas and Gulika or Mandi etc</a></li>
+<li><a href="diabetes-or-madhumeha.html">Diabetes or Madhumeha</a></li>
+<li><a href="shashtyamsha-deities.html">Shashtyamsha Deities</a></li>
+<li><a href="varga-categories-and-vargottama.html">Varga-Categories and Vargottama</a></li>
+<li><a href="effects-of-a-planet-in-antardashaa-of-relative-or-sadharmi.html">Effects of A Planet In Antardashaa of Relative or Sadharmi</a></li>
+<li><a href="compatibility-or-melapaka.html">Compatibility or Melapaka</a></li>
+<li><a href="planetary-return-charts.html">Planetary RETURN Charts</a></li>
+<li><a href="rationale-behind-exaltations-of-planets.html">Rationale behind Exaltations of Planets</a></li>
+<li><a href="astrological-mathematics-of-menstrual-cycle.html">Astrological Mathematics of Menstrual Cycle</a></li>
+<li><a href="mean-versus-true-time-and-measure-of-day-or-ghati.html">Mean versus True Time and Measure of Day or Ghati</a></li>
+<li><a href="weekday-sequence-indian-view.html">Weekday Sequence - Indian View</a></li>
+<li><a href="bhaavas-from-all-bhaavas.html">Bhaavas from all Bhaavas</a></li>
+<li><a href="maangalika-dosha.html">Maangalika Dosha</a></li>
+<li><a href="bhrigu-bindu.html">Bhrigu Bindu</a></li>
+<li><a href="sarvato-bhadra-chakra.html">Sarvato-Bhadra Chakra</a></li>
+<li><a href="vaar.html">Vaar</a></li>
+</ul>
+</li>
+<li><a href="javascript:;">Natal</a>
+<ul>
+<li><a href="donald-trump.html">Donald Trump</a></li>
+<li><a href="rashtriya-svayamsevak-sangh.html">Rashtriya Svayamsevak Sangh</a></li>
+<li><a href="swami-ramakrishna-paramhamsa.html">Swami Ramakrishna Paramhamsa</a></li>
+<li><a href="indira-gandhi.html">Indira Gandhi</a></li>
+<li><a href="indira-gandhi-hindi.html">Indira Gandhi -HINDI</a></li>
+<li><a href="aap_aam-adami-party.html">AAm Adami Party</a></li>
+<li><a href="arvind-kejriwal.html">Arvind Kejriwal</a></li>
+<li><a href="congress-vs-bjp-2014.html">Congress vs BJP 2014</a></li>
+<li><a href="swearing-in-muhurta-of-new-indian-govt-in-2014.html">Swearing-In Muhurta Of New Indian Govt In 2014</a></li>
+<li><a href="narendra-modi.html">Narendra Modi</a></li>
+<li><a href="birth-chart-of-gopinath-munde.html">Birth Chart Of Gopinath Munde</a></li>
+<li><a href="lord-rama.html">Lord Rama</a></li>
+<li><a href="jayalalita.html">Jayalalita</a></li>
+<li><a href="prediction-of-death.html">Prediction Of Death</a></li>
+<li><a href="indo-pak-cricket-match-in-world-cup-14-feb-2015-adelaide.html">Indo-Pak Cricket Match in World Cup 14 Feb 2015 Adelaide</a></li>
+<li><a href="prophet-muhammad.html">Prophet Muhammad</a></li>
+<li><a href="david-cameron.html">David Cameron</a></li>
+<li><a href="nitish-kumar.html">Nitish Kumar</a></li>
+<li><a href="amir-khan.html">Amir Khan</a></li>
+<li><a href="ram-rahim.html">Ram Rahim</a></li>
+<li><a href="amitabh-bachchan-covid19.html">Amitabh Bachchan Covid19</a></li>
+<li><a href="yogi-adityanath.html">Yogi Adityanath</a></li>
+</ul>
+</li>
+<li><a href="javascript:;">Stocks</a>
+<ul>
+<li><a href="gold-price-forecasting.html">Gold Price Forecasting</a></li>
+<li><a href="silver-graph-1.html">Silver Graph-1</a></li>
+<li><a href="forex-1.html">Forex-1</a></li>
+<li><a href="iron-price-forecasting.html">Iron Price Forecasting</a></li>
+<li><a href="sensex-forecasting.html">Sensex Forecasting</a></li>
+<li><a href="sensex-vs-gold-comparison.html">Sensex vs Gold Comparison</a></li>
+</ul>
+</li>
+<li><a href="javascript:;">Medini</a>
+<ul>
+<li><a href="raaj-jyotisha.html">Raaj-Jyotisha</a></li>
+<li><a href="national-income.html">National Income</a></li>
+<li><a href="general-principles.html">General Principles</a></li>
+<li><a href="sapta-nadi-chakra.html">Sapta-Nadi Chakra</a></li>
+<li><a href="china-japan-war-1281-a-d.html">China-Japan War 1281 A.D.</a></li>
+<li><a href="annual-rains-in-india.html">Annual Rains in India</a></li>
+<li><a href="rain-forecast-for-2013-4.html">Rain Forecast for 2013-4</a></li>
+<li><a href="rain-charts-for-2014-5.html">Rain Charts for 2014-5</a></li>
+<li><a href="weather-forecasting-temperature-c.html">Weather Forecasting - Temperature &amp;c</a></li>
+<li><a href="invasion-of-india-battle-of-plassey.html">Invasion Of India--Battle of Plassey</a></li>
+<li><a href="invasion-of-india-alexander.html">Invasion Of India--Alexander</a></li>
+<li><a href="divya-varsha-phala-1579-1939-ad.html">Divya Varsha-phala--1579-1939 AD</a></li>
+<li><a href="divya-maasa-phala-1999-2029-ad.html">Divya Maasa-phala--1999-2029 AD</a></li>
+<li><a href="uttarakhand-cataclysm-mid-june-2013.html">Uttarakhand Cataclysm--mid June 2013</a></li>
+<li><a href="world-rains-data-analysis-of-1956-7.html">World Rains Data Analysis of 1956-7</a></li>
+<li><a href="eclipses.html">Eclipses</a></li>
+<li><a href="earthquake-of-nepal-25-apr-2015.html">Earthquake of Nepal 25 Apr 2015</a></li>
+<li><a href="terror-attack-on-uri-18-sep-2016.html">Terror Attack on Uri 18 Sep 2016</a></li>
+<li><a href="fani.html">Fani फणि चक्रवात</a></li>
+</ul>
+</li>
+<li><a href="javascript:;">Articles</a>
+<ul>
+<li><a href="creative-imagination.html">Creative Imagination</a></li>
+<li><a href="history-of-pi.html">History of Pi</a></li>
+<li><a href="links_pdf-files.html">PDF files</a></li>
+<li><a href="vedic-linguistics.html">Vedic Linguistics</a></li>
+<li><a href="modern-equations-on-ancient-principles.html">Modern Equations On Ancient Principles</a></li>
+<li><a href="origin-of-tropicalism-in-western-astrology.html">Origin of Tropicalism in Western Astrology</a></li>
+<li><a href="dreams-and-moksha.html">Dreams and Moksha</a></li>
+<li><a href="vedic-versus-western-astrology.html">Vedic versus Western Astrology</a></li>
+<li><a href="non-astrological-essays.html">Non-Astrological Essays</a></li>
+<li><a href="indology.html">INDOLOGY</a></li>
+<li><a href="ayurvedic-approach-to-know-your-nature.html">Ayurvedic Approach to Know Your Nature</a></li>
+<li><a href="healthy-eating.html">Healthy Eating</a></li>
+<li><a href="mockery-of-history_horoscope-of-lord-ram.html">horoscope-of-lord-ram</a></li>
+<li><a href="dr-lakshaman-jha-biography.html">Dr Lakshaman Jha Biography</a></li>
+<li><a href="links-to-books-on-hinduism.html">Links To Books On Hinduism</a></li>
+<li><a href="allopathy-vs-ayurveda.html">Allopathy vs Ayurveda</a></li>
+</ul>
+</li>
+<li><a href="javascript:;">Misc</a>
+<ul>
+<li><a href="kundalee-software-download.html">Kundalee Software Download</a></li>
+<li><a href="kundalee-compare-software-download.html">Kundalee-Compare Software Download</a></li>
+<li><a href="bhaavaant-software-download.html">Bhaavaant Software Download</a></li>
+<li><a href="our-forum.html">Our Forum</a></li>
+<li><a href="graha-shanti-propitiation-of-planets.html">Graha Shanti (Propitiation of Planets)</a></li>
+<li><a href="best-devanagari-font.html">Best Devanagari Font</a></li>
+<li><a href="mithilakshara-font.html">Mithilakshara Font</a></li>
+<li><a href="sort-program.html">Sort Program</a></li>
+<li><a href="maithil-brahmana.html">Maithil Brahmana</a></li>
+</ul>
+</li>
+<li><a href="javascript:;">AI</a>
+<ul>
+<li><a href="machine-learning-starter.html">Machine Learning Starter</a></li>
+<li><a href="gpu-neural-network-training.html">GPU Neural Network Training</a></li>
+<li><a href="neural-network-parameters-tuning.html">Neural Network Parameters Tuning</a></li>
+<li><a href="auto-m-l-model-search.html">Auto M L Model Search</a></li>
+<li><a href="lstm-neural-network.html">LSTM Neural Network</a></li>
+<li><a href="web-scraping.html">Web Scraping</a></li>
+</ul>
+</li>
+<li><a href="javascript:;">Contact</a>
+<ul>
+<li><a href="email-to-vj.html">Email to VJ</a></li>
+<li><a href="profile-of-vinay-jha.html">Profile of Vinay Jha</a></li>
+<li><a href="credentials.html">Credentials</a></li>
+<li><a href="sitemap-search.html">SiteMap &amp; Search</a></li>
+</ul>
+</li>
+</ul>
+
+                    </div>
+                
+                <div id="login-status"><a href="javascript:;" onclick="WIKIDOT.page.listeners.createAccount(event)" class="login-status-create-account btn">Create account</a> <span>or</span> <a href="javascript:;" onclick="WIKIDOT.page.listeners.loginClick(event)" class="login-status-sign-in btn btn-primary">Sign in</a> </div>
+                <div id="header-extra-div-1"><span></span></div><div id="header-extra-div-2"><span></span></div><div id="header-extra-div-3"><span></span></div>
+            </div>
+            
+            <div id="content-wrap">
+                
+                
+                <!-- google_ad_section_end -->
+                
+                <div id="main-content">
+                    <div id="action-area-top"></div>
+                    
+                    
+                        <div id="page-title">
+                            GPU Neural Network Training
+                        </div>
+                    
+
+                    
+
+                    
+
+
+
+                    <div id="page-content">
+                        
+
+<table style="margin:0; padding:0">
+<tr>
+<td style="margin:0; padding:0">
+<div id="toc">
+<div id="toc-action-bar"><a href="javascript:;" onclick="WIKIDOT.page.listeners.foldToc(event)">Fold</a><a style="display: none" href="javascript:;" onclick="WIKIDOT.page.listeners.unfoldToc(event)">Unfold</a></div>
+<div class="title">Table of Contents</div>
+<div id="toc-list">
+<div style="margin-left: 1em;"><a href="#toc0">GPU पायथन प्रोग्रामिंग — इन्सटॉलेशन</a></div>
+<div style="margin-left: 2em;"><a href="#toc1">NVIDEA के GPU टूलकिट और न्यूरल लायब्रेरी का इन्सटॉलेशन</a></div>
+<div style="margin-left: 2em;"><a href="#toc2">कुडा−टूलकिट</a></div>
+<div style="margin-left: 2em;"><a href="#toc3">keras-gpu तथा pytorch</a></div>
+<div style="margin-left: 3em;"><a href="#toc4">OPEN-CV एनवॉयरनमेण्ट (कम्प्यूटर विज़न)</a></div>
+<div style="margin-left: 1em;"><a href="#toc5">GPU में न्यूरल नेटवर्क ट्रेनिंग</a></div>
+</div>
+</div>
+</td>
+</tr>
+</table>
+<h1 id="toc0"><span><span style="color:red"><strong>GPU पायथन प्रोग्रामिंग — इन्सटॉलेशन</strong></span></span></h1>
+<p><span style="font-size:125%;"><strong>GPU प्रोग्रामिंग द्वारा कम्प्यूटर की कम्प्यूटिंग स्पीड बहुत बढ़ायी जा सकती है ।</strong></span><br />
+NVIDEA के सबसे सस्ते २ जीबी वाले जीपीयू के कोरों की संख्या ३८४ है । उसके बाद है GPU Geforce 1050 जिसमें ६४० कोर हैं । मँहगे जीपीयू और टीपीयू में हजारों कोर होते हैं और डेस्कटॉप में अनेक वैसे जीपीयू जोड़कर मल्टी−जीपीयू प्रोग्रामिंग भी की जाती है जिसके द्वारा कम्प्यूटर की गति लाखों गुणा आप बढ़ा सकते हैं — बिना किसी सुपरकम्प्यूटर के，अपने घर बैठे । किन्तु उसमें लाखों रूपये खर्च होंगे । मेरे लैपटॉप के CPU की औसत क्षमता लगभग ५५ गेगा−फ्लॉप प्रति सेकण्ड है，किन्तु इसी लैपटॉप के GPU की क्षमता ५२०० गेगा−फ्लॉप प्रति सेकण्ड है — यदि औसतन ६ फ्लोटिंग प्वॉइण्ट ऑपरेशन प्रति सेकण्ड हों । अतः CPU−प्रोग्रामिंग की तुलना में यदि GPU प्रोग्रामिंग करेंगे तो कम्प्यूटर की गति अत्यधिक बढ़ायी जा सकती है । परन्तु अधिकांश लोग डेडिकेटेड GPU खरीदते भी हैं तो उसका उपयोग केवल वीडियो गेम खेलने में करते हैं，प्रोग्रामिंग में उसका प्रयोग केवल वैज्ञानिकों द्वारा किया जाता है ।</p>
+<p style="text-align: center;"><span style="color:red"><strong>~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</strong></span></p>
+<h2 id="toc1"><span><span style="color:blue"><strong>NVIDEA के GPU टूलकिट और न्यूरल लायब्रेरी का इन्सटॉलेशन</strong></span></span></h2>
+<p>Machine Learning Starter लेख में CPU−प्रोग्रामिंग मोड में पायथन न्यूरल नेटवर्क ट्रेनिंग हेतु समूचे एनवायरनमेण्ट का इन्सटॉलेशन और प्रोग्रामिंग का उदाहरण दिया गया था ।</p>
+<p>अनाकोण्डा में उस “बेस” एनवायरनमेण्ट के इन्सटॉलेशन के बाद जीपीयू−एनवायरनमेण्ट का इन्सटॉलेशन अब इस लेख में दिखाया जा रहा है । आपके कम्प्यूटर में NVIDEA का GPU है तभी यह लेख काम देगा । नीचे जो उदाहरण है वह NVIDEA के GPU Geforce 1050 पर टेस्ट किया गया है जो मेरे लैपटॉप में है，इसकी ग्राफिक मेमोरी 4GB है । लैपटॉप में न्यूनतम ८ जीबी सामान्य रैम और NVIDEA का कोई भी जीपीयू हो तभी यह लेख आपके काम का होगा । सामान्य रैम यदि ८ जीबी है और जीपीयू नहीं है तो पिछले लेख के छोटे प्रोग्राम जैसे प्रोग्राम ही रन करने चाहिये ।</p>
+<p style="text-align: center;"><span style="color:brown"><span style="font-size:180%;"><strong>इन्सटॉलेशन की विधि</strong></span></span></p>
+<p>अनाकोण्डा के “बेस” एनवायरनमेण्ट में “केरस” के अलावा अन्य कोई पैकेज इन्सटॉल करने में हड़बड़ी मत करें，वैसा करना ही हो तो नया एनवायरनमेण्ट बनाकर उसमें जोड़तोड़ करें । “बेस” एनवायरनमेण्ट में भूलकर भी जीपीयू लाइब्रेरियों और पैकेजों को इन्सटॉल मत करें，वरना सामान्य CPU−प्रोग्रामिंग मोड गड़बड़ा जायगा ।</p>
+<p style="text-align: center;"><span style="color:red"><strong>~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</strong></span></p>
+<h2 id="toc2"><span><span style="color:blue"><strong>कुडा−टूलकिट</strong></span></span></h2>
+<p>( CUDA = Compute Unified Device Architecture = डेडिकेटेड जीपीयू के सैकड़ों या हजारों कोरों को एकसाथ कम्प्यूटिंग हेतु प्रयुक्त करने का पैरेलल प्रोसेसिंग सॉफ्टवेयर)</p>
+<p>अब इस वेबसाइट से NVIDEA का विशाल (CUDA) <span style="color:red"><strong>कुडा−टूलकिट</strong></span> इन्सटॉल कर लें，आपका विण्डो किस वर्सन का है इसे ध्यान में रखकर कुडा−टूलकिट का वर्सन चुनें । अपने कम्प्यूटर के जीपीयू के ड्राइवर का नाम न पता हो तो इस वेबसाइट पर सबसे अच्छे ड्राइवर वाला टूलकिट चुनें (२⋅३८ जीबी का ऐक्से फाइल है，डाउनलोड करने में समय लेगा) । मेरे लैपटॉप में विण्डो−१० है，अतः मुझे cuda_10.1.243_426.00_win10.exe डाउनलोड करना पड़ा (RTX-3090 वाले डेस्कटॉप में cudnn-11.2-windows-x64-v8.1.1.33 डाउनलोड करना पड़ा) । डाउनलोड के पश्चात इस फाइल को रन करें，इन्सटॉल हो जायगा :—</p>
+<p><a href="https://developer.nvidia.com/cuda-downloads">https://developer.nvidia.com/cuda-downloads</a></p>
+<p>अब <span style="color:red"><strong>कुडा न्यूरल नेटवर्क cuDNN</strong></span> की लाइब्रेरी इस वेबसाइट से डाउनलोड करें —</p>
+<p><a href="https://developer.nvidia.com/rdp/cudnn-download">https://developer.nvidia.com/rdp/cudnn-download</a></p>
+<p>डाउनलोड के पश्चात उस जिप फाइल को अन−कम्प्रेस करके उस पूरे फोल्डर को सिस्टम ड्राइव में रख लें，जैसे कि —<br />
+C:\cudnn-10.2-windows10-x64-v7.6.5.32<br />
+अथवा<br />
+C:\cudnn-11.2-windows-x64-v8.1.1.33</p>
+<p>अब विण्डो के स्टार्ट के बगल में सर्च बॉक्स में Edit environment variables for your account ढूँढकर खोलें । खुलने पर उसमें ऊपर ‘यूजर वेरिएबल्स⋅⋅⋅’ मिलेगा，उसके अन्दर Path को चुनकर एडिट बटन दबायें और जो नया इण्टरफेस−विण्डो खुलेगा उसमें न्यू को क्लिक करकें “C:\cudnn-11.2-windows-x64-v8.1.1.33\cuda\bin” पेस्ट कर दें — अनाकोण्डा और विण्डो भी उसी C ड्राइव में होने चाहिये ।</p>
+<p>आपके कम्प्यूटर में माइक्रोसॉफ्ट विजुअल स्टुडियो है तो उसमें भी उपरोक्त सारे टूल स्वतः इन्स्टॉल्ड हो जायेंगे । माइक्रोसॉफ्ट विजुअल स्टुडियो का कम्युनिटी एडिशन मुफ्त में है किन्तु विण्डो लायसेंस वर्सन वाला चाहिये ।</p>
+<p>यदि भविष्य में कभी पायथन के किसी विशेष वर्सन वाले एनवायरनमेण्ट की आवश्यकता पड़े ，उदाहरणार्थ python 3.8.6，तो उसे बनाने के लिये बेस एनवायरनमेण्ट में निम्न कमाण्ड रन करें —</p>
+<p>conda create -n py388 python=3.8.8<br />
+(check latest anaconda's compatible version at = <a href="https://repo.anaconda.com/pkgs/main/win-64/">https://repo.anaconda.com/pkgs/main/win-64/</a> )</p>
+<p>Then,<br />
+conda activate py388</p>
+<p style="text-align: center;"><span style="color:red"><strong>~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</strong></span></p>
+<h2 id="toc3"><span><span style="color:blue"><strong>keras-gpu तथा pytorch</strong></span></span></h2>
+<p>अब अनाकोण्डा के एडमिनिस्ट्रेटिव प्रॉम्प्ट पर निम्न कमाण्ड टाइप करके नया एनवॉयरनमेण्ट केरस-जीपीयू बना लें (keras-gpu के बदले नये एनवॉयरनमेण्ट का कुछ भी नाम रख सकते हैं) —<br />
+(python=3.6 के बदले python अन्य वर्सन पहले से हो तो उसी वर्सन का नाम टाइप करें अथवा पायथन वर्सन को पहले अपडेट कर लें ।)</p>
+<p>conda create -n env_gpu python=3.7.0 anaconda</p>
+<p>फिर उस नये एनवॉयरनमेण्ट को एक्टिवेट कर लें，तब आप “बेस” से निकल जायेंगे —</p>
+<p>conda activate env_gpu</p>
+<p>अब <span style="color:red"><strong>जीपीयू−मोड वाला केरस</strong></span> और <span style="color:blue"><strong>PYTORCH</strong></span> इन्सटॉल कर लें —</p>
+<p><span style="color:blue"><strong>conda install -n env_gpu keras-gpu</strong></span></p>
+<p>(इसमें “env_gpu” एनवॉयरनमेण्ट का नाम है और “keras-gpu” केरस का जीपीयू−मोड वाला प्रोग्रामिंग पैकेज है ।)</p>
+<p><span style="color:red"><strong>pip install tensorflow-gpu==2.3.0</strong></span></p>
+<p>( यदि पहले से tensorflow-gpu का कोई पुराना वर्सन इन्सटॉल्ड है तो निम्न कमाण्ड कार्य करेगा —</p>
+<p><span style="color:red"><strong>pip install &#8212;upgrade tensorflow-gpu==2.3.0</strong></span> in both keras=gpu and opencv. )</p>
+<p><strong>बिना gpu वाला tensorflow हो या gpu सहित tensorflow-gpu，टेन्सरफ्लो के 2.3.0 से पहले का वर्सन न रखें क्योंकि वर्सन 2.3.0 और उसके बाद वाले वर्सनों में ही ऑटो मशीन लर्निंग का केरस पैकेज कार्य करेगा जो नौसीखियों से लेकर विशेषज्ञों तक को सर्वोत्तम मॉडल ढूँढने में सहायता करता है ।</strong></p>
+<p>( यदि pytorch में कार्य करना हो तो उसे इन्सटॉल करने का कोड है —<br />
+conda create &#8212;name mytorch &#8212;clone env_gpu<br />
+<span style="color:red"><strong>conda install pytorch torchvision cudatoolkit=10.1 -c pytorch</strong></span></p>
+<p>456.2&#160;MB के cudatoolkit-10.1.243 सहित 746.5&#160;MB का pytorch-1.7.0 इन्सटॉल हो जायगा । )</p>
+<div class="content-separator" style="display: none:"></div>
+<p>NOTE: 'conda-forge' channel is required for cudatoolkit 11.1<br />
+conda install pytorch torchvision torchaudio cudatoolkit=11.1 -c pytorch -c conda-forge</p>
+<p>1.20&#160;GB के cudatoolkit-11.1.1 सहित 1.53&#160;GB का pytorch-1.8.1 इन्सटॉल हो जायगा । )</p>
+<div class="content-separator" style="display: none:"></div>
+<p>किसी env1 नाम वाले एनवॉयरनमेण्ट को सदा के लिये हटाने<br />
+का यह कोड है —<br />
+conda remove &#8212;name env1 &#8212;all</p>
+<p>कोण्डा के एनवॉयरनमेण्टों का प्रबन्धन यहाँ सीख सकते हैं (अभी इस लेख के लिये आवश्यक नहीं है) —<br />
+<a href="https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html">https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html</a></p>
+<h3 id="toc4"><span><span style="color:red"><strong>OPEN-CV एनवॉयरनमेण्ट (कम्प्यूटर विज़न)</strong></span></span></h3>
+<p>ईमेज और वीडियो आदि की मशीन लर्निंग हेतु opencv नाम का नया एनवायरनमेण्ट बेस−एनवायरनमेण्ट में जाकर वहाँ से बनाकर उसमें कम्प्यूटर−विजन के पैकेजों को इन्सटॉल करें —</p>
+<p><span style="color:black"><strong>conda create -n env_opencv38 python=3.8.0 anaconda</strong></span></p>
+<p>Then,</p>
+<p><span style="color:black"><strong>conda activate env_opencv38</strong></span></p>
+<p>Then,</p>
+<p><span style="color:black"><strong>conda install scikit-learn-intelex</strong></span><br />
+<span style="color:black"><strong>pip install tensorflow-gpu==2.7.0</strong></span><br />
+<span style="color:black"><strong>conda install -c conda-forge imutils</strong></span><br />
+<span style="color:black"><strong>pip3 install &#8212;upgrade opencv-python==4.5.4.58</strong></span><br />
+<span style="color:black"><strong>pip install PyHamcrest==2.0.2</strong></span><br />
+<span style="color:black"><strong>pip install twisted==21.7.0</strong></span><br />
+<span style="color:black"><strong>pip install opencv-contrib-python</strong></span><br />
+<span style="color:black"><strong>conda install -c conda-forge easydict</strong></span><br />
+<span style="color:black"><strong>conda install -c conda-forge scikit-image</strong></span><br />
+<span style="color:black"><strong>pip install pypng</strong></span><br />
+<span style="color:black"><strong>pip3 install tensorlayer</strong></span><br />
+<span style="color:black"><strong>Download openh264-1.8.0-win64.dll and put in OpenCV env folder,for writing MP4.</strong></span></p>
+<p>यदि wrapt न हटे और उपरोक्त इन्सटॉलेशन में इस कारण बाधा हो तो conda remove wrapt कमाण्ड द्वारा wrapt को हटाये और तब tensorflow-gpu से लेकर उपरोक्त सारे कमाण्डों को दुहरायें ।</p>
+<p><span style="color:black"><strong>pip install pyinstaller</strong></span> (for creating exe ; search net for proper installation)</p>
+<p style="text-align: center;"><span style="color:red"><strong>~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</strong></span></p>
+<h1 id="toc5"><span><span style="color:red"><strong>GPU में न्यूरल नेटवर्क ट्रेनिंग</strong></span></span></h1>
+<p>किसी अन्य एनवॉयरनमेण्ट से निकलकर “बेस” में कार्य करना है तो उसे डि−एक्टिवेट करें —<br />
+conda deactivate</p>
+<p><strong>keras-gpu एनवॉयरनमेण्ट खोलकर उसमें एक प्रोग्राम बनाकर इसकी जाँच कर लें，जो नीचे है ।</strong></p>
+<p>इस वेबसाइट पर पायथन में एक (OCR का) टेस्ट प्रोग्राम है जिसके द्वारा आप उपरोक्त जीपीयू मोड की जाँच कर सकते हैं और इस प्रोग्राम की भाषा सीखकर वैसे ही नये जीपीयू मोड के प्रोग्राम भी बना सकते हैं —</p>
+<p><a href="https://github.com/antoniosehk/keras-tensorflow-windows-installation/blob/master/examples/mnist_mlp.py">https://github.com/antoniosehk/keras-tensorflow-windows-installation/blob/master/examples/mnist_mlp.py</a></p>
+<p>उस प्रोग्राम को कॉपी करके नोटपैड में पेस्ट करें और mnist_mlp.py नाम से किसी नये फोल्डर में सेव कर लें । अनाकोण्डा प्रॉम्प्ट पर निम्न पङ्क्ति लिखने पर ११ MB का विशाल डाटाबेस स्वतः प्रोग्राम में डाउनलोड होगा और फिर उसपर जीपीयू मोड की न्यूरल नेटवर्क प्रोग्रामिंग चलकर २० एपोक में ट्रेनिंग करेगी，हर एपोक में एक्यूरेसी बढ़ती जायगी जो अन्त में ९९⋅५% तक पँहुच जायगी，औसत एक्यूरेसी ९८⋅३१% होगी —</p>
+<p>python mnist_mlp.py</p>
+<p>किन्तु इसका पथ भी देना पड़ेगा；मेरे लैपटॉप में इस पायथप प्रोग्राम का पथ है —<br />
+Z:\PythonPrograms\kerasgpu\mnist_mlp.py</p>
+<p>अतः इस जीपीयू−मोड वाले एनवॉयरनमेण्ट के भीतर पायथन के एग्जेक्यूटिव फाइल का पथ भी देना पड़ेगा，तभी कोई पायथन प्रोग्राम इस एनवॉयरनमेण्ट में अनाकोण्डा प्रॉम्प्ट में खुलेगा —<br />
+C:\Anaconda3\envs\env_gpu\python.exe Z:\PythonPrograms\kerasgpu\mnist_mlp.py</p>
+<p>विकल्प यह है कि अनाकोण्डा प्रॉम्प्ट के kerasgpu एनवॉयरनमेण्ट में mnist_mlp.py फाइल के एक−एक लाइन को बारी−बारी से रन करें । इसके लिये नोटपैड में mnist_mlp.py फाइल खोलकर उसे पढ़ना पड़ेगा ।</p>
+<p>केरस के अपने वेबसाइट पर यह डैटासेट है जिसमें 28x28 पिक्सेल के ग्रेस्केल वाले रोमन लिपि के दस अङ्कों के हस्तलिखित ६० हजार इमेज ट्रेनिेग के लिये और अतिरिक्त दस हजार इमेज ट्रेनिंग सम्पन्न होने के बाद ट्रेण्ड मॉडल की टेस्टिंग के लिये है । इस डैटासेट में 28x28 पिक्सेल “shape” सहित सारे ७० हजार इमेज array में x हैं，और दस अङ्कों के लेबल और उनके shape (num_samples) array में y हैं ।</p>
+<p>प्रोग्राम के आरम्भ，मध्य और अन्त के तीन स्क्रीनशॉट संलग्न है जो दिखाते हैं कि मेरे लैपटॉप के GPU device name: GeForce GTX 1050 पर यह प्रोग्राम चला है । एक एपोक में २ सेकण्ड लगा，२० एपोक में ४० सेकण्ड लगे，जबकि डाटाबेस में ७०००० सैम्पल और 669,706 params हैं，डाटाबेस ११ MB का है : 11,490,434 bytes!</p>
+<p>रिलायन्स इण्डस्टीज लिमिटेड के ४२७ KB फाइल के सौवें हिस्से अर्थात् ४ KB की न्यूरल नेटवर्क ट्रेनिंग में केवल एक एपोक ने सवा मिनट का समय लिया — CPU मोड में । GPU मोड में मेरे लैपटॉप की गति सैकड़ों गुणा बढ़ गयी । CPU मोड में तो यह mnist प्रोग्राम कार्य ही नहीं कर पाता，या तो लैपटॉप हैंग होकर बन्द हो जाता या कई घण्टे लगते！कम्प्यूटर में पर्याप्त जनरल रैम हो और गर्मी से सुरक्षा हो तो इतनी तीव्र गति के GPU मोड में भी कई सप्ताह न्यूरल ट्रेनिंग में लगने वाले प्रोग्राम वैज्ञानिकों को बनाने पड़ते हैं जिस कारण गति और भी बढ़ाने के प्रयास होते रहते हैं ।</p>
+<p>यह जीपीयू प्रोग्राम एण्टोनियो सेह्क नाम के व्यक्ति ने बनाया और डाटाबेस भी अमेजन−क्लाउड पर उसके अकाउण्ट वाला है । उक्त प्रोग्राम में क्लाउड प्रोग्रामिंग द्वारा डाटा डाउनलोड किया गया — मेरे लैपटॉप में ।</p>
+<p>संसार के सबसे अच्छे सुपरकम्प्यूटर की गति एक अच्छे लैपटॉप से लगभग एक करोड़ गुणा तेज होती है । लैपटॉप में जीपीयू−मोड की कम्प्यूटिंग भी कुछ हजार गुणा ही गति बढ़ायेगी । किन्तु क्लाउड में गूगल−टीपीयू द्वारा असली सुपरकम्प्यूटर की शक्ति का लाभ लैपटॉप में उठा सकते हैं，केवल संख्याओं की लम्बाई，अर्थात् शुद्धि，सुपरकम्प्यूटर से कम रहेगी，किन्तु गति संसार के सबसे तेज पाँच सुपरकम्प्यूटरों के समकक्ष होगी । उसका तरीका भी वही है जो प्रस्तुत लेख में है，केवल जीपीयू की मेमोरी और कोरों की संख्या अधिक होती है और अनेक जीपीयू होते हैं । साधारण डेस्कटॉप कम्प्यूटर में अनेक जीपीयू लगाकर एकसाथ उन सबका लाभ एक ही प्रोग्राम में उठा सकते हैं ।</p>
+<p>इस प्रोग्राम के तीन स्क्रीनशॉट संलग्न है :—</p>
+<img src="../vedicastrology.wdfiles.com/local--files/gpu-neural-network-training/1.jpg" alt="1.jpg" class="image" /><br />
+<img src="../vedicastrology.wdfiles.com/local--files/gpu-neural-network-training/2.jpg" alt="2.jpg" class="image" /><br />
+<img src="../vedicastrology.wdfiles.com/local--files/gpu-neural-network-training/3.jpg" alt="3.jpg" class="image" />
+                    </div>
+
+                    
+
+
+                    
+
+
+
+                    
+
+                    <div id="page-info-break"></div>
+                    
+                        <div id="page-options-container">
+                            <div id="page-info">page revision: 77, last edited: <span class="odate time_1636343062 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%20%28%25O%20ago%29">08 Nov 2021 03:44</span></div>
+            <div id="page-options-bottom"  class="page-options-bottom">
+            <a href="javascript:;" class="btn btn-default" id="edit-button">Edit</a>
+<a href="javascript:;" class="btn btn-default" id="tags-button">Tags</a>
+
+<a href="javascript:;" class="btn btn-default" id="history-button">History</a>
+<a href="javascript:;" class="btn btn-default" id="files-button">Files</a>
+<a href="javascript:;" class="btn btn-default" id="print-button">Print</a>
+<a href="javascript:;" class="btn btn-default" id="site-tools-button">Site tools</a>
+<a href="javascript:;" class="btn btn-default" id="more-options-button">+&nbsp;Options</a> 
+</div>
+<div id="page-options-bottom-2" class="page-options-bottom form-actions" style="display:none">
+    <a href="javascript:;" class="btn btn-default" id="edit-sections-button">Edit Sections</a>
+    <a href="javascript:;" class="btn btn-default" id="edit-append-button">Append</a>
+    <a href="javascript:;" class="btn btn-default" id="edit-meta-button">Edit Meta</a>
+    <a href="javascript:;" class="btn btn-default" id="watchers-button">Watchers</a> 
+    <a href="javascript:;" class="btn btn-default" id="backlinks-button">Backlinks</a> 
+    <a href="javascript:;" class="btn btn-default" id="view-source-button">Page Source</a> 
+    <a href="javascript:;" class="btn btn-default" id="parent-page-button">Parent</a> 
+    <a href="javascript:;" class="btn btn-default" id="page-block-button">Lock Page</a>    
+    <a href="javascript:;" class="btn btn-default" id="rename-move-button">Rename</a> 
+    <a href="javascript:;" class="btn btn-default" id="delete-button">Delete</a> 
+</div>
+<div id="page-options-area-bottom">
+</div>
+
+                        </div>
+                    
+                    <div id="action-area" style="display: none;"></div>
+                </div>
+            </div>
+            
+            
+            
+            <div id="footer" style="display: block; visibility: visible;">
+                <div class="options" style="display: block; visibility: visible;">
+    <a href="http://www.wikidot.com/doc" id="wikidot-help-button">Help</a>
+    &nbsp;|
+    <a href="http://www.wikidot.com/legal:terms-of-service" id="wikidot-tos-button">Terms of Service</a>
+    &nbsp;|
+    <a href="http://www.wikidot.com/legal:privacy-policy" id="wikidot-privacy-button">Privacy</a>
+    &nbsp;|
+    <a href="javascript:;" id="bug-report-button" onclick="WIKIDOT.page.listeners.pageBugReport(event)">Report a bug</a>
+    &nbsp;|
+    <a href="javascript:;" id="abuse-report-button" onclick="WIKIDOT.page.listeners.flagPageObjectionable(event)">Flag as objectionable</a>
+</div>
+Powered by <a href="http://www.wikidot.com/">Wikidot.com</a> 
+            </div>
+            
+                <div id="license-area" class="license-area">
+                    Unless otherwise stated, the content of this page is licensed under<!--Creative Commons License--> <a rel="license" href="http://creativecommons.org/licenses/by-nc/2.5/">Creative Commons Attribution-Noncommercial 2.5  License</a>.<!--/Creative Commons License--><!-- <rdf:RDF xmlns="http://web.resource.org/cc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+	<Work rdf:about="">
+		<license rdf:resource="http://creativecommons.org/licenses/by-nc/2.5/" />
+	</Work>
+	<License rdf:about="http://creativecommons.org/licenses/by-nc/2.5/"><permits rdf:resource="http://web.resource.org/cc/Reproduction"/><permits rdf:resource="http://web.resource.org/cc/Distribution"/><requires rdf:resource="http://web.resource.org/cc/Notice"/><requires rdf:resource="http://web.resource.org/cc/Attribution"/><prohibits rdf:resource="http://web.resource.org/cc/CommercialUse"/><permits rdf:resource="http://web.resource.org/cc/DerivativeWorks"/></License></rdf:RDF> -->
+
+                </div>
+            
+            
+            
+
+
+
+            <div id="extrac-div-1"><span></span></div><div id="extrac-div-2"><span></span></div><div id="extrac-div-3"><span></span></div>
+            
+            
+            
+            
+                
+            
+        </div>
+        
+    </div>
+<!-- These extra divs/spans may be used as catch-alls to add extra imagery. -->
+<div id="extra-div-1"><span></span></div><div id="extra-div-2"><span></span></div><div id="extra-div-3"><span></span></div>
+<div id="extra-div-4"><span></span></div><div id="extra-div-5"><span></span></div><div id="extra-div-6"><span></span></div>
+</div>
+
+
+
+
+</div>
+<div id="dummy-ondomready-block" style="display: none;" ></div>
+    <!-- Google Analytics load -->
+    <script type="text/javascript">
+        (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+
+    <!-- Quantcast -->
+    <script type="text/javascript">
+    _qoptions={
+        qacct:"p-edL3gsnUjJzw-"
+    };
+    (function() {
+        var qc = document.createElement('script'); qc.type = 'text/javascript'; qc.async = true;
+        qc.src = ('https:' == document.location.protocol ? 'https://secure' : 'http://edge') + '.quantserve.com/quant.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(qc, s);
+    })();
+    </script>
+    <noscript>
+        <img src="../pixel.quantserve.com/pixel/p-edL3gsnUjJzw-.gif" style="display: none;" border="0" height="1" width="1" alt="Quantcast"/>
+    </noscript>
+
+
+
+
+<div id="page-options-bottom-tips" style="display: none;">
+    <div id="edit-button-hovertip">
+        Click here to edit contents of this page.    </div>
+</div>
+<div id="page-options-bottom-2-tips"  style="display: none;">
+    <div id="edit-sections-button-hovertip">
+        Click here to toggle editing of individual sections of the page (if possible).         Watch headings for an &quot;edit&quot; link when available.    </div>
+    <div id="edit-append-button-hovertip">
+        Append content without editing the whole page source.    </div>
+    <div id="history-button-hovertip">
+        Check out how this page has evolved in the past.    </div>
+    <div id="discuss-button-hovertip">
+        If you want to discuss contents of this page - this is the easiest way to do it.    </div>
+    <div id="files-button-hovertip">
+        View and manage file attachments for this page.    </div>
+    <div id="site-tools-button-hovertip">
+        A few useful tools to manage this Site.    </div>
+    <div id="backlinks-button-hovertip">
+        See pages that link to and include this page.    </div>
+    <div id="rename-move-button-hovertip">
+        Change the name (also URL address, possibly the category) of the page.    </div>
+    <div id="view-source-button-hovertip">
+        View wiki source for this page without editing.    </div>
+    <div id="parent-page-button-hovertip">  
+        View/set parent page (used for creating breadcrumbs and structured layout).    </div>
+            <div id="abuse-report-button-hovertip">
+            Notify administrators if there is objectionable content in this page.        </div>
+        <div id="bug-report-button-hovertip">
+            Something does not work as expected? Find out what you can do.        </div>
+        <div id="wikidot-help-button-hovertip">
+            General Wikidot.com documentation and help section.        </div>
+        <div id="wikidot-tos-button-hovertip">
+            Wikidot.com Terms of Service - what you can, what you should not etc.        </div>
+        <div id="wikidot-privacy-button-hovertip">
+            Wikidot.com Privacy Policy.          
+        </div>
+    </div>
+</body>
+
+<!-- Mirrored from vedicastrology.wikidot.com/gpu-neural-network-training by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 27 May 2022 16:49:42 GMT -->
+</html>
